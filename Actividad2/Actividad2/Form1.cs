@@ -16,5 +16,30 @@ namespace Actividad2
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            UsuarioDB usuarioDB = new UsuarioDB();
+            string username = txbUser.Text;
+            string password = txbPassword.Text;
+
+            List<Usuario> lista = new List<Usuario>();
+            lista = usuarioDB.listar();
+            foreach (Usuario usr in lista)
+            {
+                if(username == usr.username)
+                {
+                    if(password == usr.password)
+                    {
+                        MessageBox.Show("Iniciaste sesion");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wrong password...");
+                    }
+                }
+            }
+            MessageBox.Show("Usuario no existente...");
+        }
     }
 }
