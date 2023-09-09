@@ -43,5 +43,27 @@ namespace Actividad2
             }
             finally { connection.Close(); }
         }
+
+        public bool Agregar(string username, string password)
+        {
+            SqlConnection connection = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader;
+
+            try
+            {
+                connection.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "insert into [dbo].[USUARIOS] values ('" + username + "', '" + password + "', 1)";
+                cmd.Connection = connection;
+                connection.Open();
+                reader = cmd.ExecuteReader();
+                return true;
+            }
+            catch(Exception ex) {
+                return false;
+            }
+            finally { connection.Close(); }
+        }
     }
 }
