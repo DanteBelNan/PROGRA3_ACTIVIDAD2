@@ -9,3 +9,4 @@ C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programaci�
 C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.csproj.CoreCompileInputs.cache
 C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.exe
 C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.pdb
+C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.Main.resources

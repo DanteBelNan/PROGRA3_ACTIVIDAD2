@@ -23,15 +23,18 @@ namespace Actividad2
             string username = txbUser.Text;
             string password = txbPassword.Text;
 
-            List<Usuario> lista = new List<Usuario>();
-            lista = usuarioDB.listar();
-            foreach (Usuario usr in lista)
+            Usuario usuario = new Usuario();
+
+            try
             {
-                if(username == usr.username)
+                usuario = usuarioDB.obtener(username);
+                if(usuario.username == username)
                 {
-                    if(password == usr.password)
+                    if(password == usuario.password)
                     {
-                        MessageBox.Show("Iniciaste sesion");
+                        Main main = new Main(usuario);
+                        main.Show();
+                        this.Hide();
                         return;
                     }
                     else
@@ -40,9 +43,19 @@ namespace Actividad2
                         return;
                     }
                 }
+                else
+                {
+                    MessageBox.Show("User not found...");
+                    return;
+                }
+
             }
-            MessageBox.Show("Usuario no existente...");
-            return;
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
