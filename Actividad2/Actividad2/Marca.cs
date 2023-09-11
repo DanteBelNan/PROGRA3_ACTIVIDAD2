@@ -8,7 +8,7 @@ namespace Actividad2
 {
     internal class Marca
     {
-        public int idMarca  { get; set; }
-        public string nombre { get; set; }
+        public int Id  { get; set; }
+        public string Descripcion { get; set; }
     }
 }

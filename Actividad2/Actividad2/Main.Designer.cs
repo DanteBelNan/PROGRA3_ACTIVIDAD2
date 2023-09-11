@@ -100,13 +100,13 @@
             // tsmModMarca
             // 
             this.tsmModMarca.Name = "tsmModMarca";
-            this.tsmModMarca.Size = new System.Drawing.Size(179, 22);
+            this.tsmModMarca.Size = new System.Drawing.Size(180, 22);
             this.tsmModMarca.Text = "Modificar Marca";
             // 
             // tsmModCat
             // 
             this.tsmModCat.Name = "tsmModCat";
-            this.tsmModCat.Size = new System.Drawing.Size(179, 22);
+            this.tsmModCat.Size = new System.Drawing.Size(180, 22);
             this.tsmModCat.Text = "Modificar Categoria";
             // 
             // lblUserData
