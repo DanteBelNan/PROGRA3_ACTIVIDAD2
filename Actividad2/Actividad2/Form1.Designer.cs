@@ -77,6 +77,7 @@
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.Size = new System.Drawing.Size(100, 20);
             this.txbPassword.TabIndex = 4;
+            this.txbPassword.TextChanged += new System.EventHandler(this.txbPasswordChanges);
             // 
             // btnRegister
             // 
@@ -99,7 +100,11 @@
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.txbUser);
             this.Controls.Add(this.btnLogin);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(509, 395);
+            this.MinimumSize = new System.Drawing.Size(509, 395);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -17,6 +17,7 @@ namespace Actividad2
             InitializeComponent();
         }
 
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             UsuarioDB usuarioDB = new UsuarioDB();
@@ -32,7 +33,7 @@ namespace Actividad2
                 {
                     if(password == usuario.password)
                     {
-                        Main main = new Main(usuario);
+                        Main main = new Main(usuario, this);
                         main.Show();
                         this.Hide();
                         return;
@@ -71,6 +72,12 @@ namespace Actividad2
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void txbPasswordChanges(object sender, EventArgs e)
+        {
+            txbPassword.PasswordChar = '*';
+            
         }
     }
 }

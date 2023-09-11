@@ -36,8 +36,7 @@ namespace Actividad2
                     usr.username = (string)reader["username"];
                     usr.password = (string)reader["password"];
                     int id_rol = reader.GetInt32(3);
-                    usr.rol = rolDB.obtener(1);
-                    MessageBox.Show(usr.rol);
+                    usr.rol = rolDB.obtener(id_rol);
                 }
                 else
                 {
