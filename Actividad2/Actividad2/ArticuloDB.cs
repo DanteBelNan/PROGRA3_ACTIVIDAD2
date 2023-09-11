@@ -39,7 +39,7 @@ namespace Actividad2
                     lista.Add(articulo);
 
                 }
-
+                conexion.Close();  
                 return lista;
             }
             catch (Exception ex)
