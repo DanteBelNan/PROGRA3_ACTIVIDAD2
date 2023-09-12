@@ -36,9 +36,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 311);
             this.ControlBox = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(610, 350);
             this.MinimumSize = new System.Drawing.Size(610, 350);
             this.Name = "VerArticulos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "VerArticulos";
             this.ResumeLayout(false);
 

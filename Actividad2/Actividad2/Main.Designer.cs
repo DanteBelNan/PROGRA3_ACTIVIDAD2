@@ -38,6 +38,8 @@
             this.tsmModMarca = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmModCat = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUserData = new System.Windows.Forms.Label();
+            this.tsmAgrMar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAgrCat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,7 +94,9 @@
             // 
             this.tsmAdmin.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmModMarca,
-            this.tsmModCat});
+            this.tsmModCat,
+            this.tsmAgrMar,
+            this.tsmAgrCat});
             this.tsmAdmin.Name = "tsmAdmin";
             this.tsmAdmin.Size = new System.Drawing.Size(55, 20);
             this.tsmAdmin.Text = "Admin";
@@ -100,13 +104,13 @@
             // tsmModMarca
             // 
             this.tsmModMarca.Name = "tsmModMarca";
-            this.tsmModMarca.Size = new System.Drawing.Size(179, 22);
+            this.tsmModMarca.Size = new System.Drawing.Size(180, 22);
             this.tsmModMarca.Text = "Modificar Marca";
             // 
             // tsmModCat
             // 
             this.tsmModCat.Name = "tsmModCat";
-            this.tsmModCat.Size = new System.Drawing.Size(179, 22);
+            this.tsmModCat.Size = new System.Drawing.Size(180, 22);
             this.tsmModCat.Text = "Modificar Categoria";
             // 
             // lblUserData
@@ -120,6 +124,18 @@
             this.lblUserData.TabIndex = 1;
             this.lblUserData.Text = "userData";
             this.lblUserData.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // tsmAgrMar
+            // 
+            this.tsmAgrMar.Name = "tsmAgrMar";
+            this.tsmAgrMar.Size = new System.Drawing.Size(180, 22);
+            this.tsmAgrMar.Text = "Agregar Marca";
+            // 
+            // tsmAgrCat
+            // 
+            this.tsmAgrCat.Name = "tsmAgrCat";
+            this.tsmAgrCat.Size = new System.Drawing.Size(180, 22);
+            this.tsmAgrCat.Text = "Agregar Categoria";
             // 
             // Main
             // 
@@ -157,5 +173,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmModificarArticulo;
         private System.Windows.Forms.ToolStripMenuItem tsmModCat;
         private System.Windows.Forms.Label lblUserData;
+        private System.Windows.Forms.ToolStripMenuItem tsmAgrMar;
+        private System.Windows.Forms.ToolStripMenuItem tsmAgrCat;
     }
 }

@@ -14,6 +14,7 @@ namespace Actividad2
     {
         private Usuario usuario;
         private Form1 form;
+        private List<Form> forms = new List<Form>();
         public Main(Usuario usuario, Form1 form)
         {
             this.usuario = new Usuario();
@@ -40,9 +41,14 @@ namespace Actividad2
 
         private void tsmVerArticulos_Click(object sender, EventArgs e)
         {
+            foreach (Form f in forms)
+            {
+                f.Close();
+            }
             VerArticulos verArticulos = new VerArticulos();
             verArticulos.MdiParent = this;
             verArticulos.Show();
+            forms.Add(verArticulos);
         }
     }
 }
