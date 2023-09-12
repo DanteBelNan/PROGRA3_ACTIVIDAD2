@@ -50,5 +50,78 @@ namespace Actividad2
             verArticulos.Show();
             forms.Add(verArticulos);
         }
+
+        private void tsmAgregarArticulo_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in forms)
+            {
+                f.Close();
+            }
+            AgregarArticulo agregarArticulo = new AgregarArticulo();
+            agregarArticulo.MdiParent = this;
+            agregarArticulo.Show();
+            forms.Add(agregarArticulo);
+        }
+
+        private void tsmModificarArticulo_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in forms)
+            {
+                f.Close();
+            }
+            ModificarArticulo modificarArticulo = new ModificarArticulo();
+            modificarArticulo.MdiParent = this;
+            modificarArticulo.Show();
+            forms.Add(modificarArticulo);
+        }
+
+        private void tsmModMarca_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in forms)
+            {
+                f.Close();
+            }
+            ModificarMarca modMarca = new ModificarMarca();
+            modMarca.MdiParent = this;
+            modMarca.Show();
+            forms.Add(modMarca);
+        }
+
+        private void tsmModCat_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in forms)
+            {
+                f.Close();
+            }
+            ModificarCategoria modificarCategoria = new ModificarCategoria();
+            modificarCategoria.MdiParent = this;
+            modificarCategoria.Show();
+            forms.Add(modificarCategoria);
+        }
+
+        private void tsmAgrMar_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in forms)
+            {
+                f.Close();
+            }
+            AgregarMarca agregarMarca = new AgregarMarca();
+            agregarMarca.MdiParent = this;
+            agregarMarca.Show();
+            forms.Add(agregarMarca);
+        }
+
+        private void tsmAgrCat_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in forms)
+            {
+                f.Close();
+            }
+            AgregarCategoria agregarCategoria = new AgregarCategoria();
+            agregarCategoria.MdiParent = this;
+            agregarCategoria.Show();
+            forms.Add(agregarCategoria);
+
+        }
     }
 }

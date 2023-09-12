@@ -23,3 +23,9 @@ C:\Users\Comercialf\Documents\Github\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\ob
 C:\Users\Comercialf\Documents\Github\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.csproj.CoreCompileInputs.cache
 C:\Users\Comercialf\Documents\Github\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.exe
 C:\Users\Comercialf\Documents\Github\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.pdb
+C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.AgregarArticulo.resources
+C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.ModificarMarca.resources
+C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.AgregarCategoria.resources
+C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.AgregarMarca.resources
+C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.ModificarArticulo.resources
+C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.ModificarCategoria.resources

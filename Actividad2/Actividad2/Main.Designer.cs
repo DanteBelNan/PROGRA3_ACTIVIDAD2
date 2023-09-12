@@ -37,9 +37,9 @@
             this.tsmAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmModMarca = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmModCat = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblUserData = new System.Windows.Forms.Label();
             this.tsmAgrMar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAgrCat = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblUserData = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,12 +83,14 @@
             this.tsmAgregarArticulo.Name = "tsmAgregarArticulo";
             this.tsmAgregarArticulo.Size = new System.Drawing.Size(180, 22);
             this.tsmAgregarArticulo.Text = "Agregar Articulo";
+            this.tsmAgregarArticulo.Click += new System.EventHandler(this.tsmAgregarArticulo_Click);
             // 
             // tsmModificarArticulo
             // 
             this.tsmModificarArticulo.Name = "tsmModificarArticulo";
             this.tsmModificarArticulo.Size = new System.Drawing.Size(180, 22);
             this.tsmModificarArticulo.Text = "Modificar Articulo";
+            this.tsmModificarArticulo.Click += new System.EventHandler(this.tsmModificarArticulo_Click);
             // 
             // tsmAdmin
             // 
@@ -106,12 +108,28 @@
             this.tsmModMarca.Name = "tsmModMarca";
             this.tsmModMarca.Size = new System.Drawing.Size(180, 22);
             this.tsmModMarca.Text = "Modificar Marca";
+            this.tsmModMarca.Click += new System.EventHandler(this.tsmModMarca_Click);
             // 
             // tsmModCat
             // 
             this.tsmModCat.Name = "tsmModCat";
             this.tsmModCat.Size = new System.Drawing.Size(180, 22);
             this.tsmModCat.Text = "Modificar Categoria";
+            this.tsmModCat.Click += new System.EventHandler(this.tsmModCat_Click);
+            // 
+            // tsmAgrMar
+            // 
+            this.tsmAgrMar.Name = "tsmAgrMar";
+            this.tsmAgrMar.Size = new System.Drawing.Size(180, 22);
+            this.tsmAgrMar.Text = "Agregar Marca";
+            this.tsmAgrMar.Click += new System.EventHandler(this.tsmAgrMar_Click);
+            // 
+            // tsmAgrCat
+            // 
+            this.tsmAgrCat.Name = "tsmAgrCat";
+            this.tsmAgrCat.Size = new System.Drawing.Size(180, 22);
+            this.tsmAgrCat.Text = "Agregar Categoria";
+            this.tsmAgrCat.Click += new System.EventHandler(this.tsmAgrCat_Click);
             // 
             // lblUserData
             // 
@@ -124,18 +142,6 @@
             this.lblUserData.TabIndex = 1;
             this.lblUserData.Text = "userData";
             this.lblUserData.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // tsmAgrMar
-            // 
-            this.tsmAgrMar.Name = "tsmAgrMar";
-            this.tsmAgrMar.Size = new System.Drawing.Size(180, 22);
-            this.tsmAgrMar.Text = "Agregar Marca";
-            // 
-            // tsmAgrCat
-            // 
-            this.tsmAgrCat.Name = "tsmAgrCat";
-            this.tsmAgrCat.Size = new System.Drawing.Size(180, 22);
-            this.tsmAgrCat.Text = "Agregar Categoria";
             // 
             // Main
             // 
