@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace Actividad2
 {
-    internal class MarcaDB
+    internal class CategoriaDB
     {
-        public List<Marca> listar()
+        public List<Categoria> listar()
         {
-            List<Marca> lista = new List<Marca>();
+            List<Categoria> lista = new List<Categoria>();
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
             SqlDataReader lector;
@@ -21,17 +21,17 @@ namespace Actividad2
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true ";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Id, Descripcion from MARCAS";
+                comando.CommandText = "Select Id, Descripcion from CATEGORIAS";
                 comando.Connection = conexion;
                 conexion.Open();
                 lector = comando.ExecuteReader();
 
                 while (lector.Read())
                 {
-                    Marca marca = new Marca();
-                    marca.Id = (int)lector["Id"];
-                    marca.Descripcion = (string)lector["Descripcion"];
-                    lista.Add(marca);
+                    Categoria categoria = new Categoria();
+                    categoria.Id = (int)lector["Id"];
+                    categoria.Descripcion = (string)lector["Descripcion"];
+                    lista.Add(categoria);
 
                 }
                 conexion.Close();
@@ -46,7 +46,7 @@ namespace Actividad2
 
         public string obtener(int id)
         {
-            string marcaName;
+            string categoriaName;
             SqlConnection connection = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader = null;
@@ -55,7 +55,7 @@ namespace Actividad2
             {
                 connection.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "SELECT * FROM [dbo].[MARCAS] WHERE Id = @id";
+                cmd.CommandText = "SELECT * FROM [dbo].[CATEGORIAS] WHERE Id = @id";
                 cmd.Parameters.AddWithValue("@id", id);
                 cmd.Connection = connection;
 
@@ -64,18 +64,18 @@ namespace Actividad2
 
                 if (reader.Read())
                 {
-
-                    marcaName = (string)reader["Descripcion"];
+                    categoriaName = (string)reader["Descripcion"];
                 }
                 else
                 {
-                    marcaName = "N/A";
+                    categoriaName = "N/A";
                 }
-                
-                return marcaName;
+
+                return categoriaName;
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 throw;
             }
             finally

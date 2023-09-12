@@ -13,8 +13,8 @@ namespace Actividad2
         public string codigo { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
-        public int idMarca { get; set; }
-        public int idCategoria { get; set; }
-        public float precio { get; set; }  
+        public string Marca { get; set; }
+        public string Categoria { get; set; }
+        public decimal precio { get; set; }  
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Actividad2
 {
@@ -15,12 +16,14 @@ namespace Actividad2
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
             SqlDataReader lector;
+            MarcaDB marcaDB = new MarcaDB();
+            CategoriaDB categoriaDB = new CategoriaDB();
 
             try
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true ";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio from ARTICULOS";
+                comando.CommandText = "Select * from ARTICULOS";
                 comando.Connection = conexion;
                 conexion.Open();
                 lector= comando.ExecuteReader();
@@ -28,14 +31,16 @@ namespace Actividad2
                 while (lector.Read()) 
                 {
                     Articulo articulo = new Articulo();
-                    articulo.id = (int)lector["Id"];
+                    articulo.id = lector.GetInt32(0);
+                    
                     articulo.codigo = (string)lector["Codigo"];
                     articulo.nombre = (string)lector["Nombre"];
                     articulo.descripcion = (string)lector["Descripcion"];
-                    articulo.idMarca = (int)lector["IdMarca"];
-                    articulo.idCategoria = (int)lector["IdCategoria"];
-                    articulo.precio = (float)lector["Precio"];
-
+                    int idMarca = (int)lector["IdMarca"];
+                    articulo.Marca = marcaDB.obtener(idMarca);
+                    int idCategoria = (int)lector["IdCategoria"];
+                    articulo.Categoria = categoriaDB.obtener(idCategoria);
+                    articulo.precio = (decimal)lector["Precio"];
                     lista.Add(articulo);
 
                 }

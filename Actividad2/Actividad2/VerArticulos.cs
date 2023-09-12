@@ -21,7 +21,12 @@ namespace Actividad2
             InitializeComponent();
         }
 
+        private void VerArticulos_Load(object sender, EventArgs e)
+        {
+            ArticuloDB articuloDB = new ArticuloDB();
 
+            dgvArticulos.DataSource = articuloDB.listar();
+        }
     }
 
 
