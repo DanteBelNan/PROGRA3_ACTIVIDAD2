@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Actividad2
 {
@@ -46,6 +47,40 @@ namespace Actividad2
                 }
                 conexion.Close();  
                 return lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public void agregar(string codigo, string nombre, string descripcion, int idmarca, int idcategoria, decimal precio)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+
+            try
+            {
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true ";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "INSERT INTO [dbo].[ARTICULOS] ([Codigo], [Nombre], [Descripcion], [IdMarca], [IdCategoria], [Precio])" +
+                "VALUES (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio)";
+                comando.Parameters.AddWithValue("@Codigo", codigo);
+                comando.Parameters.AddWithValue("@Nombre", nombre);
+                comando.Parameters.AddWithValue("@Descripcion", descripcion);
+                comando.Parameters.AddWithValue("@IdMarca", idmarca);
+                comando.Parameters.AddWithValue("@IdCategoria", idcategoria);
+                comando.Parameters.AddWithValue("@Precio", precio);
+                comando.Connection = conexion;
+                conexion.Open();
+                int rowsAffected = comando.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Articulo creado");
+                }
+                conexion.Close();
             }
             catch (Exception ex)
             {
