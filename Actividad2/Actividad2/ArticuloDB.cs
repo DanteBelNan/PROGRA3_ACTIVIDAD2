@@ -89,5 +89,103 @@ namespace Actividad2
             }
         }
 
+        public Articulo obtener(string codigo)
+        {
+            SqlConnection connection = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader = null;
+            MarcaDB marcaDB = new MarcaDB();
+            CategoriaDB categoriaDB = new CategoriaDB();
+
+            try
+            {
+                connection.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "SELECT * FROM [dbo].[ARTICULOS] WHERE Codigo = @Codigo";
+                cmd.Parameters.AddWithValue("@Codigo", codigo);
+                cmd.Connection = connection;
+
+                connection.Open();
+                reader = cmd.ExecuteReader();
+                Articulo articulo;
+                if (reader.Read())
+                {
+                    articulo = new Articulo();
+                    articulo.id = (int)reader["Id"];
+                    articulo.nombre = (string)reader["Nombre"];
+                    articulo.descripcion = (string)reader["Descripcion"];
+                    int idMarca = (int)reader["IdMarca"];
+                    articulo.Marca = marcaDB.obtener(idMarca);
+                    int idCategoria = (int)reader["IdCategoria"];
+                    articulo.Categoria = categoriaDB.obtener(idCategoria);
+                    articulo.precio = (decimal)reader["Precio"];
+                    MessageBox.Show("Articulo cargado");
+                    return articulo;
+                }
+                else
+                {
+                    MessageBox.Show("Articulo no encontrado");
+                    return articulo = null;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+
+                connection.Close();
+            }
+        }
+
+        public void modificar(int id, string nuevoCodigo, string nuevoNombre, string nuevaDescripcion, int nuevoIdMarca, int nuevoIdCategoria, decimal nuevoPrecio)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+
+            try
+            {
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true ";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "UPDATE [dbo].[ARTICULOS] " +
+                    "SET [Codigo] = @NuevoCodigo, [Nombre] = @NuevoNombre, [Descripcion] = @NuevaDescripcion, [IdMarca] = @NuevoIdMarca, [IdCategoria] = @NuevoIdCategoria, [Precio] = @NuevoPrecio " +
+                    "WHERE [Id] = @Id";
+
+                comando.Parameters.AddWithValue("@NuevoCodigo", nuevoCodigo);
+                comando.Parameters.AddWithValue("@NuevoNombre", nuevoNombre);
+                comando.Parameters.AddWithValue("@NuevaDescripcion", nuevaDescripcion);
+                comando.Parameters.AddWithValue("@NuevoIdMarca", nuevoIdMarca);
+                comando.Parameters.AddWithValue("@NuevoIdCategoria", nuevoIdCategoria);
+                comando.Parameters.AddWithValue("@NuevoPrecio", nuevoPrecio);
+                comando.Parameters.AddWithValue("@Id", id);
+
+                comando.Connection = conexion;
+                conexion.Open();
+                int rowsAffected = comando.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Articulo modificado");
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró ningún artículo con el ID proporcionado.");
+                }
+
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
     }
 }
