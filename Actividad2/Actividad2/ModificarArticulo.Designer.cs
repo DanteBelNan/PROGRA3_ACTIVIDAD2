@@ -72,6 +72,7 @@
             this.txbCodigo.Name = "txbCodigo";
             this.txbCodigo.Size = new System.Drawing.Size(100, 20);
             this.txbCodigo.TabIndex = 3;
+            this.txbCodigo.TextChanged += new System.EventHandler(this.txbCodigo_TextChanged);
             // 
             // btnBuscar
             // 
@@ -163,6 +164,7 @@
             this.txbDescripcion.Size = new System.Drawing.Size(438, 70);
             this.txbDescripcion.TabIndex = 21;
             this.txbDescripcion.Text = "";
+            this.txbDescripcion.TextChanged += new System.EventHandler(this.txbDescripcion_TextChanged);
             // 
             // label3
             // 
@@ -180,6 +182,7 @@
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(438, 20);
             this.txbNombre.TabIndex = 19;
+            this.txbNombre.TextChanged += new System.EventHandler(this.txbNombre_TextChanged);
             // 
             // addArticle
             // 

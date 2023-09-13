@@ -58,12 +58,13 @@
             // 
             // addArticle
             // 
-            this.addArticle.Location = new System.Drawing.Point(261, 315);
+            this.addArticle.BackColor = System.Drawing.SystemColors.Control;
+            this.addArticle.Location = new System.Drawing.Point(239, 302);
             this.addArticle.Name = "addArticle";
-            this.addArticle.Size = new System.Drawing.Size(75, 23);
+            this.addArticle.Size = new System.Drawing.Size(97, 36);
             this.addArticle.TabIndex = 2;
             this.addArticle.Text = "Agregar";
-            this.addArticle.UseVisualStyleBackColor = true;
+            this.addArticle.UseVisualStyleBackColor = false;
             this.addArticle.Click += new System.EventHandler(this.addArticle_Click);
             // 
             // txbCodigo

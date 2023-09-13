@@ -45,8 +45,40 @@ namespace Actividad2
 
         }
 
+        private bool validateFields()
+        {
+            if (txbCodigo.Text.Length == 0)
+            {
+                MessageBox.Show("Codigo sin llenar");
+                return false;
+            }
+            if(txbNombre.Text.Length == 0)
+            {
+                MessageBox.Show("Nombre sin llenar");
+                return false;
+            }
+            if(txbDescripcion.Text.Length == 0)
+            {
+                MessageBox.Show("Descripcion sin llenar");
+                return false;
+            }
+            if (!checkMarca())
+            {
+                return false;
+            }
+            if (!checkCategoria())
+            {
+                return false;
+            }
+            return true;
+        }
+
         private void addArticle_Click(object sender, EventArgs e)
         {
+            if (!validateFields())
+            {
+                return;
+            }
             MarcaDB marcaDB = new MarcaDB();
             CategoriaDB categoriaDB = new CategoriaDB();
             string codigo = txbCodigo.Text;
@@ -93,5 +125,39 @@ namespace Actividad2
                 MessageBox.Show("Se ha alcanzado el límite máximo de caracteres.");
             }
         }
+
+        private bool checkMarca()
+        {
+            MarcaDB marcaDB = new MarcaDB();
+            List<Marca> listaMarca = new List<Marca>();
+            listaMarca = marcaDB.listar();
+
+            foreach (var marca in listaMarca)
+            {
+                if(marca.Descripcion == cmbMarca.Text)
+                {
+                    return true;
+                }
+            }
+            MessageBox.Show("Marca no valida");
+            return false;
+        }
+
+        private bool checkCategoria()
+        {
+            CategoriaDB categoriaDB = new CategoriaDB();
+            List<Categoria> listaCategoria = new List<Categoria>();
+            listaCategoria = categoriaDB.listar();
+            foreach (var categoria in listaCategoria)
+            {
+                if(categoria.Descripcion == cmbCategoria.Text)
+                {
+                    return true;
+                }
+            }
+            MessageBox.Show("Categoria no valida");
+            return false;
+        }
+
     }
 }
