@@ -123,5 +123,17 @@ namespace Actividad2
             forms.Add(agregarCategoria);
 
         }
+
+        private void tsmBuscarArticulo_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in forms)
+            {
+                f.Close();
+            }
+            BuscarArticulo buscarArticulo = new BuscarArticulo();
+            buscarArticulo.MdiParent = this;
+            buscarArticulo.Show();
+            forms.Add(buscarArticulo);
+        }
     }
 }

@@ -77,6 +77,7 @@
             this.tsmBuscarArticulo.Name = "tsmBuscarArticulo";
             this.tsmBuscarArticulo.Size = new System.Drawing.Size(180, 22);
             this.tsmBuscarArticulo.Text = "Buscar Articulo";
+            this.tsmBuscarArticulo.Click += new System.EventHandler(this.tsmBuscarArticulo_Click);
             // 
             // tsmAgregarArticulo
             // 
