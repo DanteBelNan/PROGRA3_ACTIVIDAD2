@@ -33,8 +33,14 @@ namespace Actividad2
 
             imagenes = imagenDB.listar();
 
+            try
+            {
+                pbArticulo.Load(imagenes[0].imagenUrl);
 
-            //pbArticulo.Load(imagenes[0].imagenUrl);
+            }catch(Exception ex)
+            {
+                pbArticulo.Image = null;
+            }
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
