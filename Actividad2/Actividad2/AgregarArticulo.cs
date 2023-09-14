@@ -7,6 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< Updated upstream
+=======
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using dominio;
+using negocio;
+>>>>>>> Stashed changes
 
 namespace Actividad2
 {

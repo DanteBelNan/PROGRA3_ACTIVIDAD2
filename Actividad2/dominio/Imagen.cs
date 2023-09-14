@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Actividad2
+namespace dominio
 {
-    internal class Imagen
+    public class Imagen
     {
         int id { get; set; }
         int idArticulo { get; set; }

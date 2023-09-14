@@ -4,11 +4,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using dominio;
 
-namespace Actividad2
+namespace negocio
 {
-    internal class CategoriaDB
+    public class CategoriaDB
     {
         public List<Categoria> listar()
         {
@@ -75,7 +75,7 @@ namespace Actividad2
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
                 throw;
             }
             finally
@@ -88,5 +88,53 @@ namespace Actividad2
                 connection.Close();
             }
         }
+<<<<<<< Updated upstream:Actividad2/Actividad2/CategoriaDB.cs
+=======
+
+        public int obtener(string desc)
+        {
+            int categoriaID;
+            SqlConnection connection = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader = null;
+
+            try
+            {
+                connection.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "SELECT * FROM [dbo].[CATEGORIAS] WHERE Descripcion = @desc";
+                cmd.Parameters.AddWithValue("@desc", desc);
+                cmd.Connection = connection;
+
+                connection.Open();
+                reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    categoriaID = (int)reader["Id"];
+                }
+                else
+                {
+                    categoriaID = 0;
+                }
+
+                return categoriaID;
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+                throw;
+            }
+            finally
+            {
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+
+                connection.Close();
+            }
+        }
+>>>>>>> Stashed changes:Actividad2/negocio/CategoriaDB.cs
     }
 }
