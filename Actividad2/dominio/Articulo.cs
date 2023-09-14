@@ -5,9 +5,9 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Actividad2
+namespace dominio
 {
-    internal class Articulo
+    public class Articulo
     {
         public int id { get; set; }
         public string codigo { get; set; }

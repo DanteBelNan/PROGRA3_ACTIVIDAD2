@@ -4,12 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+<<<<<<< Updated upstream:Actividad2/Actividad2/ArticuloDB.cs
 using System.Windows.Forms;
+=======
 using System.Collections;
+using dominio;
+>>>>>>> Stashed changes:Actividad2/negocio/ArticuloDB.cs
 
-namespace Actividad2
+namespace negocio
 {
-    internal class ArticuloDB
+    public class ArticuloDB
     {
         public List <Articulo> listar()
         {
@@ -55,6 +59,8 @@ namespace Actividad2
             }
         }
 
+<<<<<<< Updated upstream:Actividad2/Actividad2/ArticuloDB.cs
+=======
         public void agregar(string codigo, string nombre, string descripcion, int idmarca, int idcategoria, decimal precio)
         {
             SqlConnection conexion = new SqlConnection();
@@ -76,11 +82,7 @@ namespace Actividad2
                 conexion.Open();
                 int rowsAffected = comando.ExecuteNonQuery();
 
-                if (rowsAffected > 0)
-                {
-                    MessageBox.Show("Articulo creado");
-                }
-                conexion.Close();
+              
             }
             catch (Exception ex)
             {
@@ -119,12 +121,12 @@ namespace Actividad2
                     int idCategoria = (int)reader["IdCategoria"];
                     articulo.Categoria = categoriaDB.obtener(idCategoria);
                     articulo.precio = (decimal)reader["Precio"];
-                    MessageBox.Show("Articulo cargado");
+                    //MessageBox.Show("Articulo cargado");
                     return articulo;
                 }
                 else
                 {
-                    MessageBox.Show("Articulo no encontrado");
+                    //MessageBox.Show("Articulo no encontrado");
                     return articulo = null;
                 }
 
@@ -171,11 +173,11 @@ namespace Actividad2
 
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Articulo modificado");
+                    //MessageBox.Show("Articulo modificado");
                 }
                 else
                 {
-                    MessageBox.Show("No se encontró ningún artículo con el ID proporcionado.");
+                   // MessageBox.Show("No se encontró ningún artículo con el ID proporcionado.");
                 }
 
                 conexion.Close();
@@ -187,5 +189,6 @@ namespace Actividad2
         }
 
 
+>>>>>>> Stashed changes:Actividad2/negocio/ArticuloDB.cs
     }
 }

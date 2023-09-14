@@ -1,0 +1,6 @@
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\dominio\bin\Debug\dominio.dll
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\dominio\bin\Debug\dominio.pdb
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\dominio\obj\Debug\dominio.dll
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\dominio\obj\Debug\dominio.pdb

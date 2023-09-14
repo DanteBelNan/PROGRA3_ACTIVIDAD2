@@ -1,0 +1,9 @@
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\negocio\bin\Debug\negocio.dll
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\negocio\bin\Debug\negocio.pdb
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\negocio\bin\Debug\dominio.dll
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\negocio\bin\Debug\dominio.pdb
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\negocio\obj\Debug\negocio.csproj.CopyComplete
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\negocio\obj\Debug\negocio.dll
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\negocio\obj\Debug\negocio.pdb

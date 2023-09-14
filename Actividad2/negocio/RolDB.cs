@@ -4,11 +4,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using dominio;
 
-namespace Actividad2
+namespace negocio
 {
-    internal class RolDB
+    public class RolDB
     {
         public string obtener(int id)
         {
