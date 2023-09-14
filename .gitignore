@@ -5,3 +5,5 @@ Actividad2/.vs/Actividad2/v17/.suo
 Actividad2/.vs/Actividad2/v17/.suo
 Actividad2/Actividad2/bin/Debug/Actividad2.exe
 *.exe
+*.vsidx
+*.exe
