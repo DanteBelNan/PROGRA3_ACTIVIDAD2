@@ -4,11 +4,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using dominio;
 
-namespace Actividad2
+namespace negocio
 {
-    internal class CategoriaDB
+    public class CategoriaDB
     {
         public List<Categoria> listar()
         {
@@ -75,7 +75,7 @@ namespace Actividad2
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
                 throw;
             }
             finally
@@ -120,7 +120,7 @@ namespace Actividad2
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
                 throw;
             }
             finally

@@ -4,12 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-<<<<<<< Updated upstream:Actividad2/Actividad2/ArticuloDB.cs
-using System.Windows.Forms;
-=======
 using System.Collections;
 using dominio;
->>>>>>> Stashed changes:Actividad2/negocio/ArticuloDB.cs
 
 namespace negocio
 {
@@ -58,9 +54,6 @@ namespace negocio
                 throw ex;
             }
         }
-
-<<<<<<< Updated upstream:Actividad2/Actividad2/ArticuloDB.cs
-=======
         public void agregar(string codigo, string nombre, string descripcion, int idmarca, int idcategoria, decimal precio)
         {
             SqlConnection conexion = new SqlConnection();
@@ -188,7 +181,5 @@ namespace negocio
             }
         }
 
-
->>>>>>> Stashed changes:Actividad2/negocio/ArticuloDB.cs
     }
 }
