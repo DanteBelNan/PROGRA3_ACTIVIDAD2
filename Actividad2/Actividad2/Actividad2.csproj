@@ -64,32 +64,24 @@
     <Compile Include="AgregarMarca.Designer.cs">
       <DependentUpon>AgregarMarca.cs</DependentUpon>
     </Compile>
-    <Compile Include="Articulo.cs" />
-    <Compile Include="ArticuloDB.cs" />
     <Compile Include="BuscarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BuscarArticulo.Designer.cs">
       <DependentUpon>BuscarArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Categoria.cs" />
-    <Compile Include="CategoriaDB.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Imagen.cs" />
-    <Compile Include="ImagenDB.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Marca.cs" />
-    <Compile Include="MarcaDB.cs" />
     <Compile Include="ModificarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,10 +102,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rol.cs" />
-    <Compile Include="RolDB.cs" />
-    <Compile Include="Usuario.cs" />
-    <Compile Include="UsuarioDB.cs" />
     <Compile Include="VerArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +159,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dominio\dominio.csproj">
+      <Project>{027a20df-fc56-4ddb-abbd-36dd0be6865d}</Project>
+      <Name>dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\negocio\negocio.csproj">
+      <Project>{0f61d8d4-6fed-4cff-a3a0-97981c0eea1f}</Project>
+      <Name>negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,15 +4,15 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using dominio;
 
-namespace Actividad2
+namespace negocio
 {
-    internal class CategoriaDB
+    public class MarcaDB
     {
-        public List<Categoria> listar()
+        public List<Marca> listar()
         {
-            List<Categoria> lista = new List<Categoria>();
+            List<Marca> lista = new List<Marca>();
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
             SqlDataReader lector;
@@ -21,17 +21,17 @@ namespace Actividad2
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true ";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Id, Descripcion from CATEGORIAS";
+                comando.CommandText = "Select Id, Descripcion from MARCAS";
                 comando.Connection = conexion;
                 conexion.Open();
                 lector = comando.ExecuteReader();
 
                 while (lector.Read())
                 {
-                    Categoria categoria = new Categoria();
-                    categoria.Id = (int)lector["Id"];
-                    categoria.Descripcion = (string)lector["Descripcion"];
-                    lista.Add(categoria);
+                    Marca marca = new Marca();
+                    marca.Id = (int)lector["Id"];
+                    marca.Descripcion = (string)lector["Descripcion"];
+                    lista.Add(marca);
 
                 }
                 conexion.Close();
@@ -46,7 +46,7 @@ namespace Actividad2
 
         public string obtener(int id)
         {
-            string categoriaName;
+            string marcaName;
             SqlConnection connection = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader = null;
@@ -55,7 +55,7 @@ namespace Actividad2
             {
                 connection.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "SELECT * FROM [dbo].[CATEGORIAS] WHERE Id = @id";
+                cmd.CommandText = "SELECT * FROM [dbo].[MARCAS] WHERE Id = @id";
                 cmd.Parameters.AddWithValue("@id", id);
                 cmd.Connection = connection;
 
@@ -64,18 +64,18 @@ namespace Actividad2
 
                 if (reader.Read())
                 {
-                    categoriaName = (string)reader["Descripcion"];
+
+                    marcaName = (string)reader["Descripcion"];
                 }
                 else
                 {
-                    categoriaName = "N/A";
+                    marcaName = "N/A";
                 }
-
-                return categoriaName;
+                
+                return marcaName;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
                 throw;
             }
             finally
@@ -91,7 +91,7 @@ namespace Actividad2
 
         public int obtener(string desc)
         {
-            int categoriaID;
+            int marcaID;
             SqlConnection connection = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader = null;
@@ -100,7 +100,7 @@ namespace Actividad2
             {
                 connection.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "SELECT * FROM [dbo].[CATEGORIAS] WHERE Descripcion = @desc";
+                cmd.CommandText = "SELECT * FROM [dbo].[MARCAS] WHERE Descripcion = @desc";
                 cmd.Parameters.AddWithValue("@desc", desc);
                 cmd.Connection = connection;
 
@@ -109,18 +109,18 @@ namespace Actividad2
 
                 if (reader.Read())
                 {
-                    categoriaID = (int)reader["Id"];
+
+                    marcaID = (int)reader["Id"];
                 }
                 else
                 {
-                    categoriaID = 0;
+                    marcaID = 0;
                 }
 
-                return categoriaID;
+                return marcaID;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
                 throw;
             }
             finally

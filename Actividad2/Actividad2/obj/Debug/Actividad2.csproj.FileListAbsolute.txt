@@ -30,3 +30,28 @@ C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programaci�
 C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.ModificarArticulo.resources
 C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.ModificarCategoria.resources
 C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.BuscarArticulo.resources
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.csproj.AssemblyReference.cache
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.AgregarArticulo.resources
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.AgregarCategoria.resources
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.AgregarMarca.resources
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.BuscarArticulo.resources
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.Form1.resources
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.Main.resources
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.ModificarArticulo.resources
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.ModificarCategoria.resources
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.ModificarMarca.resources
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.Properties.Resources.resources
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.VerArticulos.resources
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.csproj.GenerateResource.cache
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.csproj.CoreCompileInputs.cache
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.exe
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.pdb
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\bin\Debug\Actividad2.exe.config
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\bin\Debug\Actividad2.exe
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\bin\Debug\Actividad2.pdb
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\bin\Debug\dominio.dll
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\bin\Debug\dominio.pdb
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.csproj.CopyComplete
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\bin\Debug\negocio.dll
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\bin\Debug\negocio.pdb

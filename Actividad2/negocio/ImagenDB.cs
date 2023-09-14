@@ -4,10 +4,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using dominio;
 
-namespace Actividad2
+namespace negocio
 {
-    internal class ImagenDB
+    public class ImagenDB
     {
         public List<Imagen> listar()
         {
@@ -17,6 +18,7 @@ namespace Actividad2
             SqlDataReader lector;
             MarcaDB marcaDB = new MarcaDB();
             CategoriaDB categoriaDB = new CategoriaDB();
+            
 
             try
             {

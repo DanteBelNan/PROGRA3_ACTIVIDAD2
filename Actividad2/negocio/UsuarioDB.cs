@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 using System.Collections;
+using dominio;
 
-namespace Actividad2
+namespace negocio
 {
-    internal class UsuarioDB
+    public class UsuarioDB
     {
         public Usuario obtener(string username)
         {
