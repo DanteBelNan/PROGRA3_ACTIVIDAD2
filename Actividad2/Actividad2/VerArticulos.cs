@@ -15,6 +15,7 @@ namespace Actividad2
     public partial class VerArticulos : Form
     {
 
+        private List<Articulo> articulos;
 
         public VerArticulos()
         {
@@ -24,8 +25,36 @@ namespace Actividad2
         private void VerArticulos_Load(object sender, EventArgs e)
         {
             ArticuloDB articuloDB = new ArticuloDB();
+            articulos = articuloDB.listar();
+            dgvArticulos.DataSource = articulos;
 
-            dgvArticulos.DataSource = articuloDB.listar();
+            ImagenDB imagenDB = new ImagenDB();
+            List<Imagen> imagenes;
+
+            imagenes = imagenDB.listar();
+
+
+            pbArticulo.Load(imagenes[0].imagenUrl);
+        }
+
+        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+            Articulo articuloActual = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            ImagenDB imagenDB = new ImagenDB();
+            List<Imagen> imagenes;
+            imagenes = imagenDB.listar(articuloActual.id);
+            try
+            {
+                Random random = new Random();
+                int index = random.Next(0,imagenes.Count);
+                pbArticulo.Load(imagenes[index].imagenUrl);
+            }
+            catch (Exception ex)
+            {
+                pbArticulo.Image = null;
+            }
+
+
         }
     }
 

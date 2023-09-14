@@ -8,8 +8,8 @@ namespace Actividad2
 {
     internal class Imagen
     {
-        int id { get; set; }
-        int idArticulo { get; set; }
-        string imagenUrl { get; set; }
+        public int id {  get; set; }
+        public int idArticulo { get; set; }
+        public string imagenUrl { get; set; }
     }
 }
