@@ -88,8 +88,6 @@ namespace negocio
                 connection.Close();
             }
         }
-<<<<<<< Updated upstream:Actividad2/Actividad2/CategoriaDB.cs
-=======
 
         public int obtener(string desc)
         {
@@ -135,6 +133,5 @@ namespace negocio
                 connection.Close();
             }
         }
->>>>>>> Stashed changes:Actividad2/negocio/CategoriaDB.cs
     }
 }
