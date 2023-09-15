@@ -13,34 +13,32 @@ namespace negocio
         public List<Categoria> listar()
         {
             List<Categoria> lista = new List<Categoria>();
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand comando = new SqlCommand();
-            SqlDataReader lector;
+            AccesoDatos datos = new AccesoDatos();
+
 
             try
             {
-                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true ";
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Id, Descripcion from CATEGORIAS";
-                comando.Connection = conexion;
-                conexion.Open();
-                lector = comando.ExecuteReader();
+                datos.setearConsulta("Select Id, Descripcion from CATEGORIAS");
+                datos.ejecutarLectura();
 
-                while (lector.Read())
+                while (datos.Lector.Read())
                 {
                     Categoria categoria = new Categoria();
-                    categoria.Id = (int)lector["Id"];
-                    categoria.Descripcion = (string)lector["Descripcion"];
+                    categoria.Id = (int)datos.Lector["Id"];
+                    categoria.Descripcion = (string)datos.Lector["Descripcion"];
                     lista.Add(categoria);
 
                 }
-                conexion.Close();
                 return lista;
             }
             catch (Exception ex)
             {
 
                 throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
 
@@ -132,6 +130,23 @@ namespace negocio
 
                 connection.Close();
             }
+        }
+        public void agregar (Categoria nueva)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("insert into CATEGORIAS values ('"+nueva.Descripcion+"')");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            { datos.cerrarConexion(); }
         }
     }
 }

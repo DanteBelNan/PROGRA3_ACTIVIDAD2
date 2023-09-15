@@ -14,38 +14,30 @@ namespace negocio
         public List <Articulo> listar()
         {
             List<Articulo> lista = new List<Articulo>();
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand comando = new SqlCommand();
-            SqlDataReader lector;
+            AccesoDatos datos = new AccesoDatos();
             MarcaDB marcaDB = new MarcaDB();
             CategoriaDB categoriaDB = new CategoriaDB();
 
             try
             {
-                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true ";
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select * from ARTICULOS";
-                comando.Connection = conexion;
-                conexion.Open();
-                lector= comando.ExecuteReader();
+                datos.setearConsulta("select A.Id, Codigo, Nombre, A.Descripcion, M.Descripcion as Marca, C.Descripcion as Categoria, Precio from ARTICULOS A, MARCAS M, CATEGORIAS C where M.Id =A.IdMarca and C.Id = A.IdCategoria");
+                datos.ejecutarLectura();
 
-                while (lector.Read()) 
+                while (datos.Lector.Read())
                 {
                     Articulo articulo = new Articulo();
-                    articulo.id = lector.GetInt32(0);
-                    
-                    articulo.codigo = (string)lector["Codigo"];
-                    articulo.nombre = (string)lector["Nombre"];
-                    articulo.descripcion = (string)lector["Descripcion"];
-                    int idMarca = (int)lector["IdMarca"];
-                    articulo.Marca = marcaDB.obtener(idMarca);
-                    int idCategoria = (int)lector["IdCategoria"];
-                    articulo.Categoria = categoriaDB.obtener(idCategoria);
-                    articulo.precio = (decimal)lector["Precio"];
+                    articulo.id = (int)datos.Lector["Id"];
+                    articulo.codigo = (string)datos.Lector["Codigo"];
+                    articulo.nombre = (string)datos.Lector["Nombre"];
+                    articulo.descripcion = (string)datos.Lector["Descripcion"];
+                    articulo.marca = new Marca();
+                    articulo.marca.Descripcion = (string)datos.Lector["Marca"];;
+                    articulo.categoria = new Categoria();
+                    articulo.categoria.Descripcion = (string)datos.Lector["Categoria"];
+                    articulo.precio = (decimal)datos.Lector["Precio"];
                     lista.Add(articulo);
 
                 }
-                conexion.Close();  
                 return lista;
             }
             catch (Exception ex)
@@ -53,35 +45,27 @@ namespace negocio
 
                 throw ex;
             }
+             finally
+            {
+                datos.cerrarConexion();
+            }
         }
-        public void agregar(string codigo, string nombre, string descripcion, int idmarca, int idcategoria, decimal precio)
+        public void agregar(Articulo nuevo)
         {
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand comando = new SqlCommand();
-
+            AccesoDatos datos = new AccesoDatos();
             try
             {
-                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true ";
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "INSERT INTO [dbo].[ARTICULOS] ([Codigo], [Nombre], [Descripcion], [IdMarca], [IdCategoria], [Precio])" +
-                "VALUES (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio)";
-                comando.Parameters.AddWithValue("@Codigo", codigo);
-                comando.Parameters.AddWithValue("@Nombre", nombre);
-                comando.Parameters.AddWithValue("@Descripcion", descripcion);
-                comando.Parameters.AddWithValue("@IdMarca", idmarca);
-                comando.Parameters.AddWithValue("@IdCategoria", idcategoria);
-                comando.Parameters.AddWithValue("@Precio", precio);
-                comando.Connection = conexion;
-                conexion.Open();
-                int rowsAffected = comando.ExecuteNonQuery();
-
-              
+                datos.setearConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) values ('" + nuevo.codigo + "','" + nuevo.nombre + "','" + nuevo.descripcion + "','" + nuevo.precio + "', @idMarca, @idCategoria)");
+                datos.setearParametro("@idMarca", nuevo.marca.Id);
+                datos.setearParametro("@idCategoria", nuevo.categoria.Id);
+                datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
 
                 throw ex;
             }
+            finally { datos.cerrarConexion(); }
         }
 
         public Articulo obtener(string codigo)
@@ -110,9 +94,9 @@ namespace negocio
                     articulo.nombre = (string)reader["Nombre"];
                     articulo.descripcion = (string)reader["Descripcion"];
                     int idMarca = (int)reader["IdMarca"];
-                    articulo.Marca = marcaDB.obtener(idMarca);
+                    articulo.marca.Descripcion = (string)reader["Descripcion"];
                     int idCategoria = (int)reader["IdCategoria"];
-                    articulo.Categoria = categoriaDB.obtener(idCategoria);
+                    articulo.categoria.Descripcion = (string)reader["Descripcion"];
                     articulo.precio = (decimal)reader["Precio"];
                     //MessageBox.Show("Articulo cargado");
                     return articulo;
