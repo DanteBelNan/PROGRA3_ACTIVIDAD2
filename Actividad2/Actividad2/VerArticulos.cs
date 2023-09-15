@@ -35,6 +35,9 @@ namespace Actividad2
 
             imagenes = imagenDB.listar();
 
+            try
+            {
+                pbArticulo.Load(imagenes[0].imagenUrl);
 
             //pbArticulo.Load(imagenes[0].imagenUrl);
         }
