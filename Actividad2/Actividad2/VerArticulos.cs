@@ -36,7 +36,7 @@ namespace Actividad2
             imagenes = imagenDB.listar();
 
 
-            pbArticulo.Load(imagenes[0].imagenUrl);
+            //pbArticulo.Load(imagenes[0].imagenUrl);
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)

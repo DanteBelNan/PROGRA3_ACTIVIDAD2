@@ -10,3 +10,9 @@ C:\Users\Comercialf\Documents\Github\PROGRA3_ACTIVIDAD2\Actividad2\dominio\obj\D
 C:\Users\Comercialf\Documents\Github\PROGRA3_ACTIVIDAD2\Actividad2\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
 C:\Users\Comercialf\Documents\Github\PROGRA3_ACTIVIDAD2\Actividad2\dominio\obj\Debug\dominio.dll
 C:\Users\Comercialf\Documents\Github\PROGRA3_ACTIVIDAD2\Actividad2\dominio\obj\Debug\dominio.pdb
+C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\dominio\bin\Debug\dominio.dll
+C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\dominio\bin\Debug\dominio.pdb
+C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\dominio\obj\Debug\dominio.dll
+C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\dominio\obj\Debug\dominio.pdb

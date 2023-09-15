@@ -16,3 +16,12 @@ C:\Users\Comercialf\Documents\Github\PROGRA3_ACTIVIDAD2\Actividad2\negocio\obj\D
 C:\Users\Comercialf\Documents\Github\PROGRA3_ACTIVIDAD2\Actividad2\negocio\obj\Debug\negocio.csproj.CopyComplete
 C:\Users\Comercialf\Documents\Github\PROGRA3_ACTIVIDAD2\Actividad2\negocio\obj\Debug\negocio.dll
 C:\Users\Comercialf\Documents\Github\PROGRA3_ACTIVIDAD2\Actividad2\negocio\obj\Debug\negocio.pdb
+C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\negocio\obj\Debug\negocio.dll
+C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\negocio\obj\Debug\negocio.pdb
+C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\negocio\bin\Debug\negocio.dll
+C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\negocio\bin\Debug\negocio.pdb
+C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\negocio\bin\Debug\dominio.dll
+C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\negocio\bin\Debug\dominio.pdb
+C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\negocio\obj\Debug\negocio.csproj.CopyComplete

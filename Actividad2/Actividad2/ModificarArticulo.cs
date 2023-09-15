@@ -40,8 +40,8 @@ namespace Actividad2
 
                 txbNombre.Text = articulo.nombre;
                 txbDescripcion.Text = articulo.descripcion;
-                cmbMarca.Text = articulo.Marca;
-                cmbCategoria.Text = articulo.Categoria;
+                cmbMarca.Text = articulo.marca.ToString();
+                cmbCategoria.Text = articulo.categoria.ToString();
                 nudPrecio.Value = articulo.precio;
 
             }

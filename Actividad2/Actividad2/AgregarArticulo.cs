@@ -94,7 +94,7 @@ namespace Actividad2
             int idCategoria = categoriaDB.obtener(categoria);
             decimal precio = nudPrecio.Value;
             ArticuloDB articuloDB = new ArticuloDB();
-            articuloDB.agregar(codigo, nombre, descripcion, idMarca, idCategoria, precio);
+            articuloDB.agregar(articuloDB);
         }
 
         private void txbCodigo_TextChanged(object sender, EventArgs e)

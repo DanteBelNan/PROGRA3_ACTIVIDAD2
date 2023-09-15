@@ -165,5 +165,9 @@ namespace negocio
             }
         }
 
+        public void agregar(ArticuloDB articuloDB)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
