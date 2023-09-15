@@ -44,6 +44,7 @@
             this.lblIdCategoria.Size = new System.Drawing.Size(16, 13);
             this.lblIdCategoria.TabIndex = 0;
             this.lblIdCategoria.Text = "Id";
+            this.lblIdCategoria.Click += new System.EventHandler(this.lblIdCategoria_Click);
             // 
             // lblDescCategoria
             // 
@@ -53,6 +54,7 @@
             this.lblDescCategoria.Size = new System.Drawing.Size(63, 13);
             this.lblDescCategoria.TabIndex = 1;
             this.lblDescCategoria.Text = "Descripción";
+            this.lblDescCategoria.Click += new System.EventHandler(this.lblDescCategoria_Click);
             // 
             // txtIdCat
             // 
@@ -62,6 +64,7 @@
             this.txtIdCat.ReadOnly = true;
             this.txtIdCat.Size = new System.Drawing.Size(123, 20);
             this.txtIdCat.TabIndex = 2;
+            this.txtIdCat.TextChanged += new System.EventHandler(this.txtIdCat_TextChanged);
             // 
             // txtDescCat
             // 
@@ -69,6 +72,7 @@
             this.txtDescCat.Name = "txtDescCat";
             this.txtDescCat.Size = new System.Drawing.Size(123, 20);
             this.txtDescCat.TabIndex = 3;
+            this.txtDescCat.TextChanged += new System.EventHandler(this.txtDescCat_TextChanged);
             // 
             // btnAgregar
             // 

@@ -88,5 +88,70 @@ namespace negocio
                 connection.Close();
             }
         }
+<<<<<<< Updated upstream
+=======
+
+        public int obtener(string desc)
+        {
+            int marcaID;
+            SqlConnection connection = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader = null;
+
+            try
+            {
+                connection.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "SELECT * FROM [dbo].[MARCAS] WHERE Descripcion = @desc";
+                cmd.Parameters.AddWithValue("@desc", desc);
+                cmd.Connection = connection;
+
+                connection.Open();
+                reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+
+                    marcaID = (int)reader["Id"];
+                }
+                else
+                {
+                    marcaID = 0;
+                }
+
+                return marcaID;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+
+                connection.Close();
+            }
+        }
+        public void agregar(Marca nueva)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("insert into MARCAS values ('" + nueva.Descripcion + "')");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            { datos.cerrarConexion(); }
+        }
+>>>>>>> Stashed changes
     }
 }
