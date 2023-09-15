@@ -91,3 +91,8 @@ C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\bin\Debug\negoc
 C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\bin\Debug\dominio.pdb
 C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\bin\Debug\negocio.pdb
 C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.csproj.CopyComplete
+C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\bin\Debug\dominio.dll
+C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\bin\Debug\negocio.dll
+C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\bin\Debug\dominio.pdb
+C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\bin\Debug\negocio.pdb
+C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programación 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.csproj.CopyComplete

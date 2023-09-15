@@ -1,4 +1,6 @@
-﻿using System;
+﻿using dominio;
+using negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +19,30 @@ namespace Actividad2
             InitializeComponent();
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Marca  nueva = new Marca();
+            MarcaDB marcaDB = new MarcaDB();
+
+            try
+            {
+                //nueva.Id = int.Parse(txtIdCat.Text);
+                nueva.Descripcion = txtDescMarca.Text;
+                marcaDB.agregar(nueva);
+                MessageBox.Show("Agregado exitosamente");
+                Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

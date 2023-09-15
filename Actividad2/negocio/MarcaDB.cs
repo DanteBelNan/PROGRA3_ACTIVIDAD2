@@ -88,7 +88,6 @@ namespace negocio
                 connection.Close();
             }
         }
-
         public int obtener(string desc)
         {
             int marcaID;
@@ -132,6 +131,23 @@ namespace negocio
 
                 connection.Close();
             }
+        }
+        public void agregar(Marca nueva)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("insert into MARCAS values ('" + nueva.Descripcion + "')");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            { datos.cerrarConexion(); }
         }
     }
 }

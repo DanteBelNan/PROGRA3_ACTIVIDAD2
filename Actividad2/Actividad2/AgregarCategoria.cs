@@ -51,5 +51,25 @@ namespace Actividad2
         {
 
         }
+
+        private void txtDescCat_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdCat_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDescCategoria_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblIdCategoria_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
