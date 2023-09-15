@@ -43,8 +43,7 @@
             this.tbxBuscarId.Location = new System.Drawing.Point(119, 21);
             this.tbxBuscarId.Name = "tbxBuscarId";
             this.tbxBuscarId.Size = new System.Drawing.Size(100, 20);
-            this.tbxBuscarId.TabIndex = 1; 
-            this.btnBuscar.Click += new System.EventHandler(this.tbxBuscarId_TextChanged);
+            this.tbxBuscarId.TabIndex = 1;
             // 
             // lblBuscarId
             // 

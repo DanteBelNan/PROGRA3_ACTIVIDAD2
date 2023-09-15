@@ -42,6 +42,10 @@ namespace Actividad2
             string idBuscadoTxt = tbxBuscarId.Text;
             int idBuscado = Int32.Parse(idBuscadoTxt);
             articulo = articuloDB.buscarPorId(idBuscado);
+            string mensaje_front = "Id: " + articulo.id + "\nCodigo: " + articulo.codigo + "\nNombre: " + articulo.nombre + "\nDescripcion: " + articulo.descripcion + "\nMarca: " + articulo.marca.Descripcion + "\nCategoria: " + articulo.categoria.Descripcion + "\nPrecio: " + articulo.precio;
+
+
+            MessageBox.Show(mensaje_front);
         }
     }
 }
