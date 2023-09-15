@@ -96,3 +96,6 @@ C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programaci�
 C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programaci처n 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\bin\Debug\dominio.pdb
 C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programaci처n 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\bin\Debug\negocio.pdb
 C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programaci처n 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.csproj.CopyComplete
+C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programaci처n 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.EliminarArticulo.resources
+C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programaci처n 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.EliminarCategoria.resources
+C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programaci처n 3\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.EliminarMarca.resources

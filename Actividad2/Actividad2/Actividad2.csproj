@@ -70,6 +70,24 @@
     <Compile Include="BuscarArticulo.Designer.cs">
       <DependentUpon>BuscarArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarArticulo.Designer.cs">
+      <DependentUpon>EliminarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarCategoria.Designer.cs">
+      <DependentUpon>EliminarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarMarca.Designer.cs">
+      <DependentUpon>EliminarMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +137,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarArticulo.resx">
       <DependentUpon>BuscarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarArticulo.resx">
+      <DependentUpon>EliminarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarCategoria.resx">
+      <DependentUpon>EliminarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarMarca.resx">
+      <DependentUpon>EliminarMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
