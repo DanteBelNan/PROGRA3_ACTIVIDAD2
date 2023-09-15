@@ -74,6 +74,11 @@ namespace Actividad2
             {
                 return false;
             }
+            if (yaExiste())
+            {
+                MessageBox.Show("Ya existe un Articulo con ese codigo");
+                return false;
+            }
             return true;
         }
 
@@ -85,16 +90,28 @@ namespace Actividad2
             }
             MarcaDB marcaDB = new MarcaDB();
             CategoriaDB categoriaDB = new CategoriaDB();
-            string codigo = txbCodigo.Text;
-            string nombre = txbNombre.Text;
-            string descripcion = txbDescripcion.Text;
-            string marca = cmbMarca.SelectedItem.ToString();
-            string categoria = cmbCategoria.SelectedItem.ToString();
-            int idMarca = marcaDB.obtener(marca);
-            int idCategoria = categoriaDB.obtener(categoria);
-            decimal precio = nudPrecio.Value;
+            
             ArticuloDB articuloDB = new ArticuloDB();
-            articuloDB.agregar(articuloDB);
+            Articulo articulo = new Articulo();
+            articulo.codigo = txbCodigo.Text;
+            articulo.nombre = txbNombre.Text;
+            articulo.descripcion = txbDescripcion.Text;
+            articulo.marca = new Marca();
+            articulo.marca.Descripcion = cmbMarca.Text;
+            articulo.marca.Id = marcaDB.obtener(articulo.marca.Descripcion);
+            articulo.categoria = new Categoria();
+            articulo.categoria.Descripcion = cmbCategoria.Text;
+            articulo.categoria.Id = categoriaDB.obtener(articulo.categoria.Descripcion);
+            articulo.precio = nudPrecio.Value;
+            
+            articuloDB.agregar(articulo);
+            MessageBox.Show("Articulo agregado exitosamente");
+            txbCodigo.Text = "";
+            txbNombre.Text = "";
+            txbDescripcion.Text = "";
+            cmbMarca.Text = "";
+            cmbCategoria.Text = "";
+            nudPrecio.Value = 0;
         }
 
         private void txbCodigo_TextChanged(object sender, EventArgs e)
@@ -160,6 +177,21 @@ namespace Actividad2
                 }
             }
             MessageBox.Show("Categoria no valida");
+            return false;
+        }
+
+        public bool yaExiste()
+        {
+            ArticuloDB articuloDB = new ArticuloDB();
+            List<Articulo> articulos = new List<Articulo>();
+            articulos = articuloDB.listar();
+            foreach(var articulo in articulos)
+            {
+                if(txbCodigo.Text == articulo.codigo)
+                {
+                    return true;
+                }
+            }
             return false;
         }
 
