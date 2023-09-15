@@ -44,6 +44,22 @@ namespace Actividad2
                 cmbCategoria.Text = articulo.categoria.ToString();
                 nudPrecio.Value = articulo.precio;
 
+                MarcaDB marcaDB = new MarcaDB();
+                CategoriaDB categoriaDB = new CategoriaDB();
+                List<Marca> marcas = new List<Marca>();
+                List<Categoria> categorias = new List<Categoria>();
+
+                marcas = marcaDB.listar();
+                categorias = categoriaDB.listar();
+                foreach (Marca marca in marcas)
+                {
+                    cmbMarca.Items.Add(marca.Descripcion);
+                }
+                foreach (Categoria categoria in categorias)
+                {
+                    cmbCategoria.Items.Add(categoria.Descripcion);
+                }
+
             }
 
 

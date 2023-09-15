@@ -149,5 +149,41 @@ namespace negocio
             finally
             { datos.cerrarConexion(); }
         }
+
+        public void modificar(string descripcion, string nuevaDescripcion)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+
+            try
+            {
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true ";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "UPDATE MARCAS SET Descripcion = @NuevaDescripcion WHERE Descripcion = @Descripcion;";
+                comando.Parameters.AddWithValue("@NuevaDescripcion", nuevaDescripcion);
+                comando.Parameters.AddWithValue("@descripcion", descripcion);
+
+                comando.Connection = conexion;
+                conexion.Open();
+                int rowsAffected = comando.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    //Funciona
+
+
+                }
+                else
+                {
+                    // MessageBox.Show("No se encontró ningún artículo con el ID proporcionado.");
+                }
+
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
