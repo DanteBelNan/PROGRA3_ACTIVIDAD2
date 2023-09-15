@@ -39,7 +39,13 @@ namespace Actividad2
             {
                 pbArticulo.Load(imagenes[0].imagenUrl);
 
-            //pbArticulo.Load(imagenes[0].imagenUrl);
+                pbArticulo.Load(imagenes[0].imagenUrl);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)

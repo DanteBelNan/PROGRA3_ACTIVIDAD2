@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Collections;
 using dominio;
+using System.Windows.Forms;
 
 namespace negocio
 {
@@ -31,7 +32,7 @@ namespace negocio
                     articulo.nombre = (string)datos.Lector["Nombre"];
                     articulo.descripcion = (string)datos.Lector["Descripcion"];
                     articulo.marca = new Marca();
-                    articulo.marca.Descripcion = (string)datos.Lector["Marca"];;
+                    articulo.marca.Descripcion = (string)datos.Lector["Marca"];
                     articulo.categoria = new Categoria();
                     articulo.categoria.Descripcion = (string)datos.Lector["Categoria"];
                     articulo.precio = (decimal)datos.Lector["Precio"];
@@ -186,14 +187,16 @@ namespace negocio
 
                 while(reader.Read()) {
                     articulo = new Articulo();
+                    articulo.marca = new Marca();
+                    articulo.categoria = new Categoria();
                     articulo.id = reader.GetInt32(0);
                     articulo.codigo = (string)reader["Codigo"];
                     articulo.nombre = (string)reader["Nombre"];
                     articulo.descripcion = (string)reader["Descripcion"];
                     int idMarca = (int)reader["IdMarca"];
-                    articulo.Marca = marcaDB.obtener(idMarca);
+                    articulo.marca.Descripcion = marcaDB.obtener(idMarca); 
                     int idCategoria = (int)reader["IdCategoria"];
-                    articulo.Categoria = categoriaDB.obtener(idCategoria);
+                    articulo.categoria.Descripcion = categoriaDB.obtener(idCategoria);
                     articulo.precio = (decimal)reader["Precio"];
                     if (articulo.id == Id)
                     {
