@@ -30,21 +30,6 @@ namespace Actividad2
             articulos = articuloDB.listar();
             dgvArticulos.DataSource = articulos;
 
-            ImagenDB imagenDB = new ImagenDB();
-            List<Imagen> imagenes;
-
-            imagenes = imagenDB.listar();
-
-            try
-            {
-                pbArticulo.Load(imagenes[0].imagenUrl);
-
-                pbArticulo.Load(imagenes[0].imagenUrl);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
 
         }
 

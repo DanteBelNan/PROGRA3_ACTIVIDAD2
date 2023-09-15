@@ -11,7 +11,8 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using dominio;
 using negocio;
-
+using System.Runtime.CompilerServices;
+using System.Security.Policy;
 
 namespace Actividad2
 {
@@ -105,6 +106,28 @@ namespace Actividad2
             articulo.precio = nudPrecio.Value;
             
             articuloDB.agregar(articulo);
+
+            Articulo getId = new Articulo();
+            getId = articuloDB.obtener(txbCodigo.Text);
+
+            ImagenDB imagenDB = new ImagenDB();
+
+            if (lvUrlImagen.Items.Count == 0)
+            {
+                //no cargo imagenes
+            }
+            else
+            {
+                foreach (ListViewItem item in lvUrlImagen.Items)
+                {
+                    Imagen imagen = new Imagen();
+                    imagen.idArticulo = getId.id;
+                    imagen.imagenUrl = item.Text;
+                    imagenDB.agregar(imagen);
+
+                }
+            }
+
             MessageBox.Show("Articulo agregado exitosamente");
             txbCodigo.Text = "";
             txbNombre.Text = "";
@@ -195,5 +218,61 @@ namespace Actividad2
             return false;
         }
 
+        private void btnAgregarUrl_Click(object sender, EventArgs e)
+        {
+
+            if (validarImg())
+            {
+                lvUrlImagen.Items.Add(txbUrlImagen.Text);
+
+            }
+        }
+
+        private bool validarImg()
+        {
+            if (txbUrlImagen.Text.Length < 1)
+            {
+                MessageBox.Show("El texto esta vacio");
+                return false;
+            }
+            if (!isLink(txbUrlImagen.Text))
+            {
+                return false;
+            }
+            if (alreadyExist(txbUrlImagen.Text))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+
+        private bool isLink(string url)
+        {
+            string https = "https://";
+            if (!url.Contains(https)){
+                MessageBox.Show("La url no es segura");
+                return false;
+            }
+            return true;
+        }
+
+        private bool alreadyExist(string url)
+        {
+            if(lvUrlImagen.Items.Count == 0)
+            {
+                return false;
+            }
+            foreach(ListViewItem item in lvUrlImagen.Items)
+            {
+                if(item.Text == url)
+                {
+                    MessageBox.Show("Esta imagen ya existe");
+                    return  true;   
+                }
+            }
+            return false;
+        }
     }
 }

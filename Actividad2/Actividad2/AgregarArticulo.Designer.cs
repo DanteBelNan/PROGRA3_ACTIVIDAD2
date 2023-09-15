@@ -42,6 +42,10 @@
             this.lblCategoria = new System.Windows.Forms.Label();
             this.nudPrecio = new System.Windows.Forms.NumericUpDown();
             this.Precio = new System.Windows.Forms.Label();
+            this.lblUrlImagen = new System.Windows.Forms.Label();
+            this.txbUrlImagen = new System.Windows.Forms.TextBox();
+            this.lvUrlImagen = new System.Windows.Forms.ListView();
+            this.btnAgregarUrl = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +53,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.85F);
-            this.lblTitulo.Location = new System.Drawing.Point(243, 31);
+            this.lblTitulo.Location = new System.Drawing.Point(221, 7);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(93, 15);
             this.lblTitulo.TabIndex = 1;
@@ -59,9 +63,9 @@
             // addArticle
             // 
             this.addArticle.BackColor = System.Drawing.SystemColors.Control;
-            this.addArticle.Location = new System.Drawing.Point(239, 302);
+            this.addArticle.Location = new System.Drawing.Point(224, 302);
             this.addArticle.Name = "addArticle";
-            this.addArticle.Size = new System.Drawing.Size(97, 36);
+            this.addArticle.Size = new System.Drawing.Size(123, 36);
             this.addArticle.TabIndex = 2;
             this.addArticle.Text = "Agregar";
             this.addArticle.UseVisualStyleBackColor = false;
@@ -69,16 +73,16 @@
             // 
             // txbCodigo
             // 
-            this.txbCodigo.Location = new System.Drawing.Point(90, 59);
+            this.txbCodigo.Location = new System.Drawing.Point(68, 35);
             this.txbCodigo.Name = "txbCodigo";
-            this.txbCodigo.Size = new System.Drawing.Size(438, 20);
+            this.txbCodigo.Size = new System.Drawing.Size(464, 20);
             this.txbCodigo.TabIndex = 3;
             this.txbCodigo.TextChanged += new System.EventHandler(this.txbCodigo_TextChanged);
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(44, 62);
+            this.lblCodigo.Location = new System.Drawing.Point(22, 38);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(40, 13);
             this.lblCodigo.TabIndex = 4;
@@ -87,16 +91,16 @@
             // 
             // txbNombre
             // 
-            this.txbNombre.Location = new System.Drawing.Point(90, 94);
+            this.txbNombre.Location = new System.Drawing.Point(68, 70);
             this.txbNombre.Name = "txbNombre";
-            this.txbNombre.Size = new System.Drawing.Size(438, 20);
+            this.txbNombre.Size = new System.Drawing.Size(464, 20);
             this.txbNombre.TabIndex = 5;
             this.txbNombre.TextChanged += new System.EventHandler(this.txbNombre_TextChanged);
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(44, 97);
+            this.lblNombre.Location = new System.Drawing.Point(22, 73);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 6;
@@ -106,9 +110,9 @@
             // txbDescripcion
             // 
             this.txbDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbDescripcion.Location = new System.Drawing.Point(90, 131);
+            this.txbDescripcion.Location = new System.Drawing.Point(68, 97);
             this.txbDescripcion.Name = "txbDescripcion";
-            this.txbDescripcion.Size = new System.Drawing.Size(438, 70);
+            this.txbDescripcion.Size = new System.Drawing.Size(464, 70);
             this.txbDescripcion.TabIndex = 7;
             this.txbDescripcion.Text = "";
             this.txbDescripcion.TextChanged += new System.EventHandler(this.txbDescripcion_TextChanged);
@@ -116,7 +120,7 @@
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(21, 159);
+            this.lblDescripcion.Location = new System.Drawing.Point(-1, 125);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
             this.lblDescripcion.TabIndex = 8;
@@ -126,7 +130,7 @@
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(44, 210);
+            this.lblMarca.Location = new System.Drawing.Point(22, 181);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(37, 13);
             this.lblMarca.TabIndex = 10;
@@ -136,23 +140,23 @@
             // cmbMarca
             // 
             this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(90, 207);
+            this.cmbMarca.Location = new System.Drawing.Point(68, 178);
             this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(438, 21);
+            this.cmbMarca.Size = new System.Drawing.Size(144, 21);
             this.cmbMarca.TabIndex = 11;
             // 
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(90, 239);
+            this.cmbCategoria.Location = new System.Drawing.Point(68, 213);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(438, 21);
+            this.cmbCategoria.Size = new System.Drawing.Size(144, 21);
             this.cmbCategoria.TabIndex = 12;
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(32, 242);
+            this.lblCategoria.Location = new System.Drawing.Point(10, 216);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(52, 13);
             this.lblCategoria.TabIndex = 13;
@@ -161,27 +165,68 @@
             // 
             // nudPrecio
             // 
-            this.nudPrecio.Location = new System.Drawing.Point(90, 266);
+            this.nudPrecio.Location = new System.Drawing.Point(68, 250);
             this.nudPrecio.Name = "nudPrecio";
-            this.nudPrecio.Size = new System.Drawing.Size(438, 20);
+            this.nudPrecio.Size = new System.Drawing.Size(144, 20);
             this.nudPrecio.TabIndex = 15;
             this.nudPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Precio
             // 
             this.Precio.AutoSize = true;
-            this.Precio.Location = new System.Drawing.Point(29, 268);
+            this.Precio.Location = new System.Drawing.Point(7, 252);
             this.Precio.Name = "Precio";
             this.Precio.Size = new System.Drawing.Size(37, 13);
             this.Precio.TabIndex = 16;
             this.Precio.Text = "Precio";
             this.Precio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblUrlImagen
+            // 
+            this.lblUrlImagen.AutoSize = true;
+            this.lblUrlImagen.Location = new System.Drawing.Point(221, 179);
+            this.lblUrlImagen.Name = "lblUrlImagen";
+            this.lblUrlImagen.Size = new System.Drawing.Size(58, 13);
+            this.lblUrlImagen.TabIndex = 17;
+            this.lblUrlImagen.Text = "Url Imagen";
+            this.lblUrlImagen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txbUrlImagen
+            // 
+            this.txbUrlImagen.Location = new System.Drawing.Point(285, 176);
+            this.txbUrlImagen.Name = "txbUrlImagen";
+            this.txbUrlImagen.Size = new System.Drawing.Size(247, 20);
+            this.txbUrlImagen.TabIndex = 18;
+            // 
+            // lvUrlImagen
+            // 
+            this.lvUrlImagen.HideSelection = false;
+            this.lvUrlImagen.Location = new System.Drawing.Point(285, 199);
+            this.lvUrlImagen.Name = "lvUrlImagen";
+            this.lvUrlImagen.Size = new System.Drawing.Size(247, 97);
+            this.lvUrlImagen.TabIndex = 19;
+            this.lvUrlImagen.UseCompatibleStateImageBehavior = false;
+            this.lvUrlImagen.View = System.Windows.Forms.View.List;
+            // 
+            // btnAgregarUrl
+            // 
+            this.btnAgregarUrl.Location = new System.Drawing.Point(523, 174);
+            this.btnAgregarUrl.Name = "btnAgregarUrl";
+            this.btnAgregarUrl.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarUrl.TabIndex = 20;
+            this.btnAgregarUrl.Text = "Agregar";
+            this.btnAgregarUrl.UseVisualStyleBackColor = true;
+            this.btnAgregarUrl.Click += new System.EventHandler(this.btnAgregarUrl_Click);
+            // 
             // AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 350);
+            this.Controls.Add(this.btnAgregarUrl);
+            this.Controls.Add(this.lvUrlImagen);
+            this.Controls.Add(this.txbUrlImagen);
+            this.Controls.Add(this.lblUrlImagen);
             this.Controls.Add(this.Precio);
             this.Controls.Add(this.nudPrecio);
             this.Controls.Add(this.lblCategoria);
@@ -225,5 +270,9 @@
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.NumericUpDown nudPrecio;
         private System.Windows.Forms.Label Precio;
+        private System.Windows.Forms.Label lblUrlImagen;
+        private System.Windows.Forms.TextBox txbUrlImagen;
+        private System.Windows.Forms.ListView lvUrlImagen;
+        private System.Windows.Forms.Button btnAgregarUrl;
     }
 }
