@@ -81,6 +81,11 @@ namespace Actividad2
             {
                 return;
             }
+            if(txbNewMarca.Text.Length < 1)
+            {
+                MessageBox.Show("El campo esta vacio");
+                return;
+            }
             MarcaDB marcaDB = new MarcaDB();
             try
             {
@@ -89,7 +94,7 @@ namespace Actividad2
                 this.Close();
             }catch(Exception ex)
             {
-
+                MessageBox.Show("Error al modificar el articulo");
             }
             
         }
