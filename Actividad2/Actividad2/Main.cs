@@ -136,5 +136,41 @@ namespace Actividad2
             buscarArticulo.Show();
             forms.Add(buscarArticulo);
         }
+
+        private void eliminarMarcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in forms)
+            {
+                f.Close();
+            }
+            EliminarMarca eliminarMarca = new EliminarMarca();
+            eliminarMarca.MdiParent = this;
+            eliminarMarca.Show();
+            forms.Add(eliminarMarca);
+        }
+
+        private void eliminarCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in forms)
+            {
+                f.Close();
+            }
+            EliminarCategoria eliminarCategoria = new EliminarCategoria();
+            eliminarCategoria.MdiParent = this;
+            eliminarCategoria.Show();
+            forms.Add(eliminarCategoria);
+        }
+
+        private void eliminarArticuloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in forms)
+            {
+                f.Close();
+            }
+            EliminarArticulo eliminarArticulo = new EliminarArticulo();
+            eliminarArticulo.MdiParent = this;
+            eliminarArticulo.Show();
+            forms.Add(eliminarArticulo);
+        }
     }
 }
