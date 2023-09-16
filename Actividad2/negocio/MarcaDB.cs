@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -183,6 +184,24 @@ namespace negocio
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+        public void eliminar(int id)
+        {
+            Marca marca = new Marca();
+            try
+            {
+               
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from MARCAS where Id=@id");
+                datos.setearParametro("@id", id);
+                datos.ejecutarAccion();
+                
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }
