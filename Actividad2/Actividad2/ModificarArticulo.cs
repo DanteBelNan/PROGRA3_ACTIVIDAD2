@@ -29,6 +29,7 @@ namespace Actividad2
 
             if(articulo == null)
             {
+                MessageBox.Show("Articulo no encontrado");
                 addArticle.Enabled = false;
                 addArticle.BackColor = Color.Gray;
 
@@ -188,7 +189,7 @@ namespace Actividad2
         {
             nudPrecio.DecimalPlaces = 2;
             nudPrecio.Minimum = 0;
-            nudPrecio.Maximum = 50000000;
+            nudPrecio.Maximum = 9999999999;
             nudPrecio.Increment = 10;
         }
     }

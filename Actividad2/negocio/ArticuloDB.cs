@@ -227,5 +227,41 @@ namespace negocio
         {
             throw new NotImplementedException();
         }
+
+        public void eliminar(int id)
+        {
+            SqlConnection connection = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            try
+            {
+                connection.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "DELETE FROM [dbo].[ARTICULOS] WHERE Id = @Id";
+                cmd.Parameters.AddWithValue("@Id", id);
+                cmd.Connection = connection;
+
+                connection.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Artículo eliminado con éxito");
+                }
+                else
+                {
+                    MessageBox.Show("El artículo con el ID proporcionado no existe");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
     }
 }
