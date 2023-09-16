@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using dominio;
 
 namespace negocio
@@ -73,7 +75,7 @@ namespace negocio
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
                 throw;
             }
             finally
@@ -118,7 +120,7 @@ namespace negocio
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
                 throw;
             }
             finally
@@ -131,6 +133,7 @@ namespace negocio
                 connection.Close();
             }
         }
+
         public void agregar (Categoria nueva)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -147,6 +150,77 @@ namespace negocio
             }
             finally
             { datos.cerrarConexion(); }
+        }
+        public void eliminarCategoria(int id)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+
+            try
+            {
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true ";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "DELETE FROM [dbo].[CATEGORIAS] " +
+                    "WHERE [Id] = @Id";
+
+                comando.Parameters.AddWithValue("@Id", id);
+
+                comando.Connection = conexion;
+                conexion.Open();
+                int rowsAffected = comando.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Categoria eliminada");
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró ninguna categoria con el ID proporcionado.");
+                }
+
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        public void modificarDescripcion(int id, string nuevaDescripcion)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+
+            try
+            {
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true ";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "UPDATE [dbo].[CATEGORIAS] " +
+                    "SET [Descripcion] = @NuevaDescripcion " +
+                    "WHERE [Id] = @Id";
+
+                comando.Parameters.AddWithValue("@NuevaDescripcion", nuevaDescripcion);
+                comando.Parameters.AddWithValue("@Id", id);
+
+                comando.Connection = conexion;
+                conexion.Open();
+                int rowsAffected = comando.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Categoria modificada");
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró ninguna categoria con el ID proporcionado.");
+                }
+
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

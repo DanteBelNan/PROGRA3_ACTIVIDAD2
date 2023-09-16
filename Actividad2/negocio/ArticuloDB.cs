@@ -153,11 +153,11 @@ namespace negocio
 
                 if (rowsAffected > 0)
                 {
-                    //MessageBox.Show("Articulo modificado");
+                    MessageBox.Show("Articulo modificado");
                 }
                 else
                 {
-                   // MessageBox.Show("No se encontró ningún artículo con el ID proporcionado.");
+                   MessageBox.Show("No se encontró ningún artículo con el ID proporcionado.");
                 }
 
                 conexion.Close();

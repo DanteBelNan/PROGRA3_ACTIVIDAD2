@@ -223,6 +223,7 @@
             this.Name = "ModificarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ModificarArticulo";
+            this.Load += new System.EventHandler(this.ModificarArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

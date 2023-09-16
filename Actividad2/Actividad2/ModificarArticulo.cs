@@ -181,5 +181,10 @@ namespace Actividad2
             }
             return true;
         }
+
+        private void ModificarArticulo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
