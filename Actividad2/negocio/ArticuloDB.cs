@@ -21,7 +21,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select A.Id, Codigo, Nombre, A.Descripcion, M.Descripcion as Marca, C.Descripcion as Categoria, Precio from ARTICULOS A, MARCAS M, CATEGORIAS C where M.Id =A.IdMarca and C.Id = A.IdCategoria");
+                datos.setearConsulta("select * from articulos");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -31,10 +31,12 @@ namespace negocio
                     articulo.codigo = (string)datos.Lector["Codigo"];
                     articulo.nombre = (string)datos.Lector["Nombre"];
                     articulo.descripcion = (string)datos.Lector["Descripcion"];
+                    int idMarca = (int)datos.Lector["IdMarca"];
                     articulo.marca = new Marca();
-                    articulo.marca.Descripcion = (string)datos.Lector["Marca"];
+                    articulo.marca.Descripcion = marcaDB.obtener(idMarca);
+                    int idCategoria = (int)datos.Lector["IdCategoria"];
                     articulo.categoria = new Categoria();
-                    articulo.categoria.Descripcion = (string)datos.Lector["Categoria"];
+                    articulo.categoria.Descripcion = categoriaDB.obtener(idCategoria);
                     articulo.precio = (decimal)datos.Lector["Precio"];
                     lista.Add(articulo);
 

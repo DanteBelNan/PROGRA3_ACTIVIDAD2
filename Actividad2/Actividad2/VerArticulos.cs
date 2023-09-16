@@ -27,8 +27,15 @@ namespace Actividad2
         private void VerArticulos_Load(object sender, EventArgs e)
         {
             ArticuloDB articuloDB = new ArticuloDB();
-            articulos = articuloDB.listar();
-            dgvArticulos.DataSource = articulos;
+            try
+            {
+                articulos = articuloDB.listar();
+                dgvArticulos.DataSource = articulos;
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
 
         }
