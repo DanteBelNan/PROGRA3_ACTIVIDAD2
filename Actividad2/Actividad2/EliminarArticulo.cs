@@ -61,7 +61,6 @@ namespace Actividad2
             if(articulo != null)
             {
                 articuloDB.eliminar(articulo.id);
-                MessageBox.Show("Articulo eliminado");
                 txbCodigo.Text = "";
                 txbNombre.Text = "";
                 txbDescripcion.Text = "";
