@@ -40,8 +40,8 @@ namespace Actividad2
 
                 txbNombre.Text = articulo.nombre;
                 txbDescripcion.Text = articulo.descripcion;
-                cmbMarca.Text = articulo.marca.ToString();
-                cmbCategoria.Text = articulo.categoria.ToString();
+                cmbMarca.Text = articulo.marca.Descripcion;
+                cmbCategoria.Text = articulo.categoria.Descripcion;
                 nudPrecio.Value = articulo.precio;
 
                 MarcaDB marcaDB = new MarcaDB();
@@ -86,6 +86,8 @@ namespace Actividad2
             int idCategoria = categoriaDB.obtener(categoria);
 
             articuloDB.modificar(id, codigo, nombre, desc, idMarca, idCategoria, precio);
+            MessageBox.Show("Articulo modificado");
+            this.Close();
         }
 
         private void txbCodigo_TextChanged(object sender, EventArgs e)
@@ -180,6 +182,14 @@ namespace Actividad2
                 return false;
             }
             return true;
+        }
+
+        private void ModificarArticulo_Load(object sender, EventArgs e)
+        {
+            nudPrecio.DecimalPlaces = 2;
+            nudPrecio.Minimum = 0;
+            nudPrecio.Maximum = 50000000;
+            nudPrecio.Increment = 10;
         }
     }
 }

@@ -83,7 +83,7 @@ namespace negocio
             {
                 connection.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion as Marca, C.Descripcion as Categoria, A.Precio FROM ARTICULOS A , MARCAS M , CATEGORIAS C Where A.IdMarca = M.Id and A.IdCategoria = C.Id AND A.Codigo = @Codigo";
+                cmd.CommandText = "SELECT * FROM ARTICULOS WHERE Codigo = @Codigo";
                 cmd.Parameters.AddWithValue("@Codigo", codigo);
                 cmd.Connection = connection;
 
@@ -94,16 +94,17 @@ namespace negocio
                 {
                     articulo = new Articulo();
                     articulo.id = (int)reader["Id"];
+                    articulo.codigo = (string)reader["Codigo"];
                     articulo.nombre = (string)reader["Nombre"];
                     articulo.descripcion = (string)reader["Descripcion"];
-                    //int idMarca = (int)reader["IdMarca"];
+                    int idMarca = (int)reader["IdMarca"];
                     articulo.marca = new Marca();
-                    articulo.marca.Descripcion = (string)reader["Marca"];
-                    //int idCategoria = (int)reader["IdCategoria"];
+                    articulo.marca.Descripcion = marcaDB.obtener(idMarca);
+                    int idCategoria = (int)reader["IdCategoria"];
                     articulo.categoria = new Categoria();
-                    articulo.categoria.Descripcion = (string)reader["Descripcion"];
+                    articulo.categoria.Descripcion = categoriaDB.obtener(idCategoria);
                     articulo.precio = (decimal)reader["Precio"];
-                    //MessageBox.Show("Articulo cargado");
+
                     return articulo;
                 }
                 else

@@ -40,12 +40,19 @@ namespace Actividad2
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             string idBuscadoTxt = tbxBuscarId.Text;
-            int idBuscado = Int32.Parse(idBuscadoTxt);
-            articulo = articuloDB.buscarPorId(idBuscado);
-            string mensaje_front = "Id: " + articulo.id + "\nCodigo: " + articulo.codigo + "\nNombre: " + articulo.nombre + "\nDescripcion: " + articulo.descripcion + "\nMarca: " + articulo.marca.Descripcion + "\nCategoria: " + articulo.categoria.Descripcion + "\nPrecio: " + articulo.precio;
+            try
+            {
+                int idBuscado = Int32.Parse(idBuscadoTxt);
+                articulo = articuloDB.buscarPorId(idBuscado);
+                string mensaje_front = "Id: " + articulo.id + "\nCodigo: " + articulo.codigo + "\nNombre: " + articulo.nombre + "\nDescripcion: " + articulo.descripcion + "\nMarca: " + articulo.marca.Descripcion + "\nCategoria: " + articulo.categoria.Descripcion + "\nPrecio: " + articulo.precio;
 
 
-            MessageBox.Show(mensaje_front);
+                MessageBox.Show(mensaje_front);
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -135,6 +135,8 @@ namespace Actividad2
             cmbMarca.Text = "";
             cmbCategoria.Text = "";
             nudPrecio.Value = 0;
+            txbUrlImagen.Text = "";
+            lvUrlImagen.Items.Clear();
         }
 
         private void txbCodigo_TextChanged(object sender, EventArgs e)
