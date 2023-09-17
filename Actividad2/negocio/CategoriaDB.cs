@@ -151,7 +151,7 @@ namespace negocio
             finally
             { datos.cerrarConexion(); }
         }
-        public void eliminarCategoria(int id)
+        public void EliminarCategoria(int id)
         {
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
@@ -186,7 +186,7 @@ namespace negocio
             }
 
         }
-        public void modificarDescripcion(int id, string nuevaDescripcion)
+        public void ModificarDescripcion(int id, string nuevaDescripcion)
         {
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();

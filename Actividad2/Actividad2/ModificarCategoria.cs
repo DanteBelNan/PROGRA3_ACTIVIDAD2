@@ -1,6 +1,4 @@
-﻿using dominio;
-using negocio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dominio;
+using negocio;
 
 namespace Actividad2
 {
@@ -43,7 +43,7 @@ namespace Actividad2
 
             string nuevaDescTxt = tbxNuevaDescripcion.Text;
 
-            categoriaDB.modificarDescripcion(idBuscado, nuevaDescTxt);
+            categoriaDB.ModificarDescripcion(idBuscado, nuevaDescTxt);
         }
 
         private void tbxIdCategoria_TextChanged(object sender, EventArgs e)

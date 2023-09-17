@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Actividad2
 {
     public partial class EliminarCategoria : Form
@@ -40,8 +41,9 @@ namespace Actividad2
         {
             string idBuscadoTxt = tbxIdCategoria.Text;
             int idBuscado = Int32.Parse(idBuscadoTxt);
+            categoriaDB.EliminarCategoria(idBuscado);
 
-            categoriaDB.eliminarCategoria(idBuscado);
+        
         }
 
         private void tbxIdCategoria_TextChanged(object sender, EventArgs e)
