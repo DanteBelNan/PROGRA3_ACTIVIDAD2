@@ -32,8 +32,6 @@
             this.lblIdCategoria = new System.Windows.Forms.Label();
             this.lblNuevaDescripcion = new System.Windows.Forms.Label();
             this.btnConfirmarEdicion = new System.Windows.Forms.Button();
-            this.lblDescripcionAModificar = new System.Windows.Forms.Label();
-            this.lblDescripcionBuscada = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cbxCategorias = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -45,7 +43,6 @@
             this.tbxNuevaDescripcion.Size = new System.Drawing.Size(412, 95);
             this.tbxNuevaDescripcion.TabIndex = 2;
             this.tbxNuevaDescripcion.Text = "";
-            //this.tbxNuevaDescripcion.TextChanged += new System.EventHandler(this.tbxNuevaDescripcion_TextChanged);
             // 
             // lblIdCategoria
             // 
@@ -75,24 +72,6 @@
             this.btnConfirmarEdicion.UseVisualStyleBackColor = true;
             this.btnConfirmarEdicion.Click += new System.EventHandler(this.btnConfirmarEdicion_Click);
             // 
-            // lblDescripcionAModificar
-            // 
-            this.lblDescripcionAModificar.AutoSize = true;
-            this.lblDescripcionAModificar.Location = new System.Drawing.Point(41, 103);
-            this.lblDescripcionAModificar.Name = "lblDescripcionAModificar";
-            this.lblDescripcionAModificar.Size = new System.Drawing.Size(120, 13);
-            this.lblDescripcionAModificar.TabIndex = 7;
-            this.lblDescripcionAModificar.Text = "Descripcion a modificar:";
-            // 
-            // lblDescripcionBuscada
-            // 
-            this.lblDescripcionBuscada.AutoSize = true;
-            this.lblDescripcionBuscada.Location = new System.Drawing.Point(172, 103);
-            this.lblDescripcionBuscada.Name = "lblDescripcionBuscada";
-            this.lblDescripcionBuscada.Size = new System.Drawing.Size(52, 13);
-            this.lblDescripcionBuscada.TabIndex = 8;
-            this.lblDescripcionBuscada.Text = "&Categoria";
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(481, 238);
@@ -118,8 +97,6 @@
             this.ClientSize = new System.Drawing.Size(594, 311);
             this.Controls.Add(this.cbxCategorias);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.lblDescripcionBuscada);
-            this.Controls.Add(this.lblDescripcionAModificar);
             this.Controls.Add(this.btnConfirmarEdicion);
             this.Controls.Add(this.lblNuevaDescripcion);
             this.Controls.Add(this.lblIdCategoria);
@@ -128,6 +105,7 @@
             this.Name = "ModificarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ModificarCategoria";
+            this.Load += new System.EventHandler(this.ModificarCategoria_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,8 +116,6 @@
         private System.Windows.Forms.Label lblIdCategoria;
         private System.Windows.Forms.Label lblNuevaDescripcion;
         private System.Windows.Forms.Button btnConfirmarEdicion;
-        private System.Windows.Forms.Label lblDescripcionAModificar;
-        private System.Windows.Forms.Label lblDescripcionBuscada;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox cbxCategorias;
     }

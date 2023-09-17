@@ -152,7 +152,7 @@ namespace negocio
             { datos.cerrarConexion(); }
         }
 
-        public void EliminarCategoria(int id)
+        public void EliminarCategoria(string desc)
         {
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
@@ -162,9 +162,9 @@ namespace negocio
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true ";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "DELETE FROM [dbo].[CATEGORIAS] " +
-                    "WHERE [Id] = @Id";
+                    "WHERE [Descripcion] = @desc";
 
-                comando.Parameters.AddWithValue("@Id", id);
+                comando.Parameters.AddWithValue("@desc", desc);
 
                 comando.Connection = conexion;
                 conexion.Open();

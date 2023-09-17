@@ -25,12 +25,6 @@ namespace Actividad2
         private void ModificarCategoria_Load(object sender, EventArgs e)
         {
 
-            cbxCategorias.Items.Clear();
-            listaCategoria = categoriaDB.listar();
-            foreach (var categoria in listaCategoria)
-            {
-                cbxCategorias.Items.Add(categoria);
-            }
         }
       
         private void btnConfirmarEdicion_Click(object sender, EventArgs e)
@@ -40,6 +34,7 @@ namespace Actividad2
             string nuevaDescTxt = tbxNuevaDescripcion.Text;
 
             categoriaDB.ModificarDescripcion(nuevaDescTxt, viejaDescTxt);
+            Close();
         }
         
         private void tbxNuevaDescripcion_TextChanged(object sender, EventArgs e)
@@ -56,6 +51,16 @@ namespace Actividad2
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void ModificarCategoria_Load_1(object sender, EventArgs e)
+        {
+            cbxCategorias.Items.Clear();
+            listaCategoria = categoriaDB.listar();
+            foreach (var categoria in listaCategoria)
+            {
+                cbxCategorias.Items.Add(categoria);
+            }
         }
     }
 }
