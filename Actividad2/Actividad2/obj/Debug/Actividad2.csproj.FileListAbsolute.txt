@@ -102,3 +102,6 @@ C:\Users\dante\OneDrive\Escritorio\Educacion\UTN\tercer-cuatrimestre\programaci√
 C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.EliminarArticulo.resources
 C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.EliminarCategoria.resources
 C:\Users\Marian\Desktop\PROGRA3_ACTIVIDAD2\Actividad2\Actividad2\obj\Debug\Actividad2.EliminarMarca.resources
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.EliminarArticulo.resources
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.EliminarCategoria.resources
+C:\Users\Agnostic\Documents\GitHub\PROGRA3_ACTIVIDAD20\Actividad2\Actividad2\obj\Debug\Actividad2.EliminarMarca.resources
