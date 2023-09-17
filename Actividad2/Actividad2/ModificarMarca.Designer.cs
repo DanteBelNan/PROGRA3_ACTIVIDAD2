@@ -34,6 +34,7 @@
             this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.lblMarca = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -82,7 +83,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(241, 203);
+            this.button1.Location = new System.Drawing.Point(123, 178);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(160, 46);
             this.button1.TabIndex = 33;
@@ -90,11 +91,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(289, 178);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(160, 46);
+            this.btnCancelar.TabIndex = 34;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // ModificarMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 350);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txbNewMarca);
             this.Controls.Add(this.label2);
@@ -121,5 +133,6 @@
         private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

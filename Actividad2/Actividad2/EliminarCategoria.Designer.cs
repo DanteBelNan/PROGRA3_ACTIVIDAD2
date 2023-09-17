@@ -34,6 +34,7 @@
             this.lblCategoriaEliminar = new System.Windows.Forms.Label();
             this.btnBuscarCategoria = new System.Windows.Forms.Button();
             this.btnEliminarCategoria = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblIdCategoria
@@ -83,7 +84,7 @@
             // btnEliminarCategoria
             // 
             this.btnEliminarCategoria.AutoEllipsis = true;
-            this.btnEliminarCategoria.Location = new System.Drawing.Point(265, 297);
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(82, 287);
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
             this.btnEliminarCategoria.Size = new System.Drawing.Size(75, 28);
             this.btnEliminarCategoria.TabIndex = 5;
@@ -91,11 +92,23 @@
             this.btnEliminarCategoria.UseVisualStyleBackColor = true;
             this.btnEliminarCategoria.Click += new System.EventHandler(this.btnEliminarCategoria_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.AutoEllipsis = true;
+            this.btnCancelar.Location = new System.Drawing.Point(163, 287);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 28);
+            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // EliminarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 350);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEliminarCategoria);
             this.Controls.Add(this.btnBuscarCategoria);
             this.Controls.Add(this.lblCategoriaEliminar);
@@ -121,5 +134,6 @@
         private System.Windows.Forms.Label lblCategoriaEliminar;
         private System.Windows.Forms.Button btnBuscarCategoria;
         private System.Windows.Forms.Button btnEliminarCategoria;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

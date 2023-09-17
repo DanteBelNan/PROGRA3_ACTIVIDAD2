@@ -42,6 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txbNombre = new System.Windows.Forms.TextBox();
             this.deleteArticle = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,7 +172,7 @@
             // 
             this.deleteArticle.BackColor = System.Drawing.SystemColors.ControlDark;
             this.deleteArticle.Enabled = false;
-            this.deleteArticle.Location = new System.Drawing.Point(264, 286);
+            this.deleteArticle.Location = new System.Drawing.Point(200, 284);
             this.deleteArticle.Name = "deleteArticle";
             this.deleteArticle.Size = new System.Drawing.Size(101, 33);
             this.deleteArticle.TabIndex = 41;
@@ -179,11 +180,23 @@
             this.deleteArticle.UseVisualStyleBackColor = false;
             this.deleteArticle.Click += new System.EventHandler(this.deleteArticle_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnCancelar.Location = new System.Drawing.Point(322, 284);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(101, 33);
+            this.btnCancelar.TabIndex = 42;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
+            // 
             // EliminarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 350);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.deleteArticle);
             this.Controls.Add(this.nudPrecio);
             this.Controls.Add(this.Precio);
@@ -227,5 +240,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.Button deleteArticle;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
