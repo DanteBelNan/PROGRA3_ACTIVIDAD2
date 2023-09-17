@@ -28,61 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbxIdCategoria = new System.Windows.Forms.TextBox();
             this.tbxNuevaDescripcion = new System.Windows.Forms.RichTextBox();
             this.lblIdCategoria = new System.Windows.Forms.Label();
             this.lblNuevaDescripcion = new System.Windows.Forms.Label();
-            this.btnBuscarCategoria = new System.Windows.Forms.Button();
             this.btnConfirmarEdicion = new System.Windows.Forms.Button();
             this.lblDescripcionAModificar = new System.Windows.Forms.Label();
             this.lblDescripcionBuscada = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.cbxCategorias = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // tbxIdCategoria
-            // 
-            this.tbxIdCategoria.Location = new System.Drawing.Point(131, 19);
-            this.tbxIdCategoria.Name = "tbxIdCategoria";
-            this.tbxIdCategoria.Size = new System.Drawing.Size(48, 20);
-            this.tbxIdCategoria.TabIndex = 0;
-            this.tbxIdCategoria.TextChanged += new System.EventHandler(this.tbxIdCategoria_TextChanged);
             // 
             // tbxNuevaDescripcion
             // 
-            this.tbxNuevaDescripcion.Location = new System.Drawing.Point(44, 205);
+            this.tbxNuevaDescripcion.Location = new System.Drawing.Point(44, 177);
             this.tbxNuevaDescripcion.Name = "tbxNuevaDescripcion";
-            this.tbxNuevaDescripcion.Size = new System.Drawing.Size(412, 67);
+            this.tbxNuevaDescripcion.Size = new System.Drawing.Size(412, 95);
             this.tbxNuevaDescripcion.TabIndex = 2;
             this.tbxNuevaDescripcion.Text = "";
-            this.tbxNuevaDescripcion.TextChanged += new System.EventHandler(this.tbxNuevaDescripcion_TextChanged);
+            //this.tbxNuevaDescripcion.TextChanged += new System.EventHandler(this.tbxNuevaDescripcion_TextChanged);
             // 
             // lblIdCategoria
             // 
             this.lblIdCategoria.AutoSize = true;
             this.lblIdCategoria.Location = new System.Drawing.Point(58, 22);
             this.lblIdCategoria.Name = "lblIdCategoria";
-            this.lblIdCategoria.Size = new System.Drawing.Size(67, 13);
+            this.lblIdCategoria.Size = new System.Drawing.Size(111, 13);
             this.lblIdCategoria.TabIndex = 3;
-            this.lblIdCategoria.Text = "Id Categoria:";
+            this.lblIdCategoria.Text = "Seleccione Categoria:";
             // 
             // lblNuevaDescripcion
             // 
             this.lblNuevaDescripcion.AutoSize = true;
-            this.lblNuevaDescripcion.Location = new System.Drawing.Point(41, 174);
+            this.lblNuevaDescripcion.Location = new System.Drawing.Point(41, 148);
             this.lblNuevaDescripcion.Name = "lblNuevaDescripcion";
             this.lblNuevaDescripcion.Size = new System.Drawing.Size(101, 13);
             this.lblNuevaDescripcion.TabIndex = 4;
             this.lblNuevaDescripcion.Text = "Nueva Descripcion:";
-            // 
-            // btnBuscarCategoria
-            // 
-            this.btnBuscarCategoria.Location = new System.Drawing.Point(185, 13);
-            this.btnBuscarCategoria.Name = "btnBuscarCategoria";
-            this.btnBuscarCategoria.Size = new System.Drawing.Size(64, 31);
-            this.btnBuscarCategoria.TabIndex = 5;
-            this.btnBuscarCategoria.Text = "Buscar";
-            this.btnBuscarCategoria.UseVisualStyleBackColor = true;
-            this.btnBuscarCategoria.Click += new System.EventHandler(this.btnBuscarCategoria_Click);
             // 
             // btnConfirmarEdicion
             // 
@@ -97,7 +78,7 @@
             // lblDescripcionAModificar
             // 
             this.lblDescripcionAModificar.AutoSize = true;
-            this.lblDescripcionAModificar.Location = new System.Drawing.Point(41, 71);
+            this.lblDescripcionAModificar.Location = new System.Drawing.Point(41, 103);
             this.lblDescripcionAModificar.Name = "lblDescripcionAModificar";
             this.lblDescripcionAModificar.Size = new System.Drawing.Size(120, 13);
             this.lblDescripcionAModificar.TabIndex = 7;
@@ -106,7 +87,7 @@
             // lblDescripcionBuscada
             // 
             this.lblDescripcionBuscada.AutoSize = true;
-            this.lblDescripcionBuscada.Location = new System.Drawing.Point(167, 71);
+            this.lblDescripcionBuscada.Location = new System.Drawing.Point(172, 103);
             this.lblDescripcionBuscada.Name = "lblDescripcionBuscada";
             this.lblDescripcionBuscada.Size = new System.Drawing.Size(52, 13);
             this.lblDescripcionBuscada.TabIndex = 8;
@@ -122,20 +103,27 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // cbxCategorias
+            // 
+            this.cbxCategorias.FormattingEnabled = true;
+            this.cbxCategorias.Location = new System.Drawing.Point(175, 19);
+            this.cbxCategorias.Name = "cbxCategorias";
+            this.cbxCategorias.Size = new System.Drawing.Size(207, 21);
+            this.cbxCategorias.TabIndex = 10;
+            // 
             // ModificarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 311);
+            this.Controls.Add(this.cbxCategorias);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblDescripcionBuscada);
             this.Controls.Add(this.lblDescripcionAModificar);
             this.Controls.Add(this.btnConfirmarEdicion);
-            this.Controls.Add(this.btnBuscarCategoria);
             this.Controls.Add(this.lblNuevaDescripcion);
             this.Controls.Add(this.lblIdCategoria);
             this.Controls.Add(this.tbxNuevaDescripcion);
-            this.Controls.Add(this.tbxIdCategoria);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ModificarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
@@ -146,15 +134,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tbxIdCategoria;
         private System.Windows.Forms.RichTextBox tbxNuevaDescripcion;
         private System.Windows.Forms.Label lblIdCategoria;
         private System.Windows.Forms.Label lblNuevaDescripcion;
-        private System.Windows.Forms.Button btnBuscarCategoria;
         private System.Windows.Forms.Button btnConfirmarEdicion;
         private System.Windows.Forms.Label lblDescripcionAModificar;
         private System.Windows.Forms.Label lblDescripcionBuscada;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.ComboBox cbxCategorias;
     }
 }

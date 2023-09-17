@@ -14,8 +14,9 @@ namespace Actividad2
 {
     public partial class ModificarCategoria : Form
     {
+
         CategoriaDB categoriaDB = new CategoriaDB();
-        Categoria categoria = new Categoria();
+        List<Categoria> listaCategoria = new List<Categoria>();
 
         public ModificarCategoria()
         {
@@ -23,50 +24,35 @@ namespace Actividad2
         }
         private void ModificarCategoria_Load(object sender, EventArgs e)
         {
+
+            cbxCategorias.Items.Clear();
+            listaCategoria = categoriaDB.listar();
+            foreach (var categoria in listaCategoria)
+            {
+                cbxCategorias.Items.Add(categoria);
+            }
         }
-
-
-        private void btnBuscarCategoria_Click(object sender, EventArgs e)
-        {
-
-            string idBuscadoTxt = tbxIdCategoria.Text;
-            int idBuscado = Int32.Parse(idBuscadoTxt);
-
-            string textParaLabel = categoriaDB.obtener(idBuscado);
-            lblDescripcionBuscada.Text= textParaLabel;
-
-        }
+      
         private void btnConfirmarEdicion_Click(object sender, EventArgs e)
         {
-            string idBuscadoTxt = tbxIdCategoria.Text;
-            int idBuscado = Int32.Parse(idBuscadoTxt);
+            string viejaDescTxt = cbxCategorias.Text;
 
             string nuevaDescTxt = tbxNuevaDescripcion.Text;
 
-            categoriaDB.ModificarDescripcion(idBuscado, nuevaDescTxt);
+            categoriaDB.ModificarDescripcion(nuevaDescTxt, viejaDescTxt);
         }
-
-        private void tbxIdCategoria_TextChanged(object sender, EventArgs e)
-        {
-            int limit = 5;
-            if (tbxIdCategoria.Text.Length > limit)
-            {
-                tbxIdCategoria.Text = tbxIdCategoria.Text.Substring(0, limit);
-                tbxIdCategoria.SelectionStart = limit;
-                MessageBox.Show("Se ha alcanzado el límite máximo de caracteres.");
-            }
-        }
+        
         private void tbxNuevaDescripcion_TextChanged(object sender, EventArgs e)
         {
             int limit = 150;
-            if (tbxIdCategoria.Text.Length > limit)
+            if (tbxNuevaDescripcion.Text.Length > limit)
             {
-                tbxIdCategoria.Text = tbxIdCategoria.Text.Substring(0, limit);
-                tbxIdCategoria.SelectionStart = limit;
+                tbxNuevaDescripcion.Text = tbxNuevaDescripcion.Text.Substring(0, limit);
+                tbxNuevaDescripcion.SelectionStart = limit;
                 MessageBox.Show("Se ha alcanzado el límite máximo de caracteres.");
             }
         }
-
+        
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();

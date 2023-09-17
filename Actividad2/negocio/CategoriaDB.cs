@@ -187,7 +187,7 @@ namespace negocio
             }
 
         }
-        public void ModificarDescripcion(int id, string nuevaDescripcion)
+        public void ModificarDescripcion(string nuevaDescripcion, string descripcionVieja)
         {
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
@@ -198,10 +198,10 @@ namespace negocio
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "UPDATE [dbo].[CATEGORIAS] " +
                     "SET [Descripcion] = @NuevaDescripcion " +
-                    "WHERE [Id] = @Id";
+                    "WHERE [Descripcion] = @descripcionVieja";
 
                 comando.Parameters.AddWithValue("@NuevaDescripcion", nuevaDescripcion);
-                comando.Parameters.AddWithValue("@Id", id);
+                comando.Parameters.AddWithValue("@descripcionVieja", descripcionVieja);
 
                 comando.Connection = conexion;
                 conexion.Open();
