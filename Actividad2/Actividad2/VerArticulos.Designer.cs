@@ -30,6 +30,8 @@
         {
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.pbArticulo = new System.Windows.Forms.PictureBox();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.btnAdelante = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulo)).BeginInit();
             this.SuspendLayout();
@@ -52,12 +54,38 @@
             this.pbArticulo.TabIndex = 1;
             this.pbArticulo.TabStop = false;
             // 
+            // btnAtras
+            // 
+            this.btnAtras.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnAtras.Enabled = false;
+            this.btnAtras.Location = new System.Drawing.Point(427, 245);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(75, 23);
+            this.btnAtras.TabIndex = 2;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // btnAdelante
+            // 
+            this.btnAdelante.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnAdelante.Enabled = false;
+            this.btnAdelante.Location = new System.Drawing.Point(523, 245);
+            this.btnAdelante.Name = "btnAdelante";
+            this.btnAdelante.Size = new System.Drawing.Size(75, 23);
+            this.btnAdelante.TabIndex = 3;
+            this.btnAdelante.Text = "Adelante";
+            this.btnAdelante.UseVisualStyleBackColor = false;
+            this.btnAdelante.Click += new System.EventHandler(this.Adelante_Click);
+            // 
             // VerArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 350);
             this.ControlBox = false;
+            this.Controls.Add(this.btnAdelante);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.pbArticulo);
             this.Controls.Add(this.dgvArticulos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -77,5 +105,7 @@
 
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.PictureBox pbArticulo;
+        private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Button btnAdelante;
     }
 }

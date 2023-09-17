@@ -151,6 +151,7 @@ namespace negocio
             finally
             { datos.cerrarConexion(); }
         }
+
         public void EliminarCategoria(int id)
         {
             SqlConnection conexion = new SqlConnection();

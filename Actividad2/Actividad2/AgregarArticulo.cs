@@ -225,6 +225,7 @@ namespace Actividad2
 
             if (validarImg())
             {
+                txbUrlImagen.Text = "";
                 lvUrlImagen.Items.Add(txbUrlImagen.Text);
 
             }
