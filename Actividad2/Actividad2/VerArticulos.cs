@@ -98,7 +98,7 @@ namespace Actividad2
             }
             catch (Exception ex)
             {
-                pbArticulo.Load("https://imgs.search.brave.com/S3T3B8nahnuwGHbVWX6JrrDTeQ9cKkw7nxC8Vabl9lU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzg5LzU1LzE1/LzM2MF9GXzg5NTUx/NTk2X0xkSEFaUnd6/M2k0RU00SjBOSE5I/eTJoRVVZRGZYYzBq/LmpwZw");
+                pbArticulo.Load("https://imgs.search.brave.com/jhh6dmNp1Vbc8vMSSDCk_kkSV6frsAznqf3cmw9LNXI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93ZXN0/LWdhbWVzLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMS8w/Ny92dGZlZGl0LWVy/cm9yLWxvYWRpbmct/aW1hZ2UucG5n");
             }
         }
 
@@ -122,7 +122,7 @@ namespace Actividad2
                 pbArticulo.Load(imagenes[imgLoaded].imagenUrl);
             }catch (Exception ex)
             {
-                pbArticulo.Load("https://imgs.search.brave.com/S3T3B8nahnuwGHbVWX6JrrDTeQ9cKkw7nxC8Vabl9lU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzg5LzU1LzE1/LzM2MF9GXzg5NTUx/NTk2X0xkSEFaUnd6/M2k0RU00SjBOSE5I/eTJoRVVZRGZYYzBq/LmpwZw");
+                pbArticulo.Load("https://imgs.search.brave.com/jhh6dmNp1Vbc8vMSSDCk_kkSV6frsAznqf3cmw9LNXI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93ZXN0/LWdhbWVzLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMS8w/Ny92dGZlZGl0LWVy/cm9yLWxvYWRpbmct/aW1hZ2UucG5n");
             }
         }
     }
