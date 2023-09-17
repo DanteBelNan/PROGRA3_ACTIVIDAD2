@@ -277,5 +277,10 @@ namespace Actividad2
             }
             return false;
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

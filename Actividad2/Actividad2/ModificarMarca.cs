@@ -109,5 +109,10 @@ namespace Actividad2
                 MessageBox.Show("Se ha alcanzado el límite máximo de caracteres.");
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

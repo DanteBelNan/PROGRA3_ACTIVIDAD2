@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -191,6 +192,11 @@ namespace Actividad2
             nudPrecio.Minimum = 0;
             nudPrecio.Maximum = 9999999999;
             nudPrecio.Increment = 10;
+        }
+
+        private void btnCancela_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

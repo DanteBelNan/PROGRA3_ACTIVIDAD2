@@ -36,6 +36,7 @@
             this.btnConfirmarEdicion = new System.Windows.Forms.Button();
             this.lblDescripcionAModificar = new System.Windows.Forms.Label();
             this.lblDescripcionBuscada = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbxIdCategoria
@@ -85,7 +86,7 @@
             // 
             // btnConfirmarEdicion
             // 
-            this.btnConfirmarEdicion.Location = new System.Drawing.Point(479, 237);
+            this.btnConfirmarEdicion.Location = new System.Drawing.Point(481, 197);
             this.btnConfirmarEdicion.Name = "btnConfirmarEdicion";
             this.btnConfirmarEdicion.Size = new System.Drawing.Size(66, 35);
             this.btnConfirmarEdicion.TabIndex = 6;
@@ -111,11 +112,22 @@
             this.lblDescripcionBuscada.TabIndex = 8;
             this.lblDescripcionBuscada.Text = "&Categoria";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(481, 238);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(66, 35);
+            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // ModificarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 311);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblDescripcionBuscada);
             this.Controls.Add(this.lblDescripcionAModificar);
             this.Controls.Add(this.btnConfirmarEdicion);
@@ -143,5 +155,6 @@
         private System.Windows.Forms.Button btnConfirmarEdicion;
         private System.Windows.Forms.Label lblDescripcionAModificar;
         private System.Windows.Forms.Label lblDescripcionBuscada;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

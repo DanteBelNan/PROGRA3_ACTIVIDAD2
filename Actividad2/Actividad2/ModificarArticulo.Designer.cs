@@ -44,6 +44,7 @@
             this.txbNombre = new System.Windows.Forms.TextBox();
             this.addArticle = new System.Windows.Forms.Button();
             this.nudPrecio = new System.Windows.Forms.NumericUpDown();
+            this.btnCancela = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,7 +181,7 @@
             // 
             this.addArticle.BackColor = System.Drawing.SystemColors.ControlDark;
             this.addArticle.Enabled = false;
-            this.addArticle.Location = new System.Drawing.Point(255, 284);
+            this.addArticle.Location = new System.Drawing.Point(129, 277);
             this.addArticle.Name = "addArticle";
             this.addArticle.Size = new System.Drawing.Size(101, 33);
             this.addArticle.TabIndex = 29;
@@ -196,11 +197,23 @@
             this.nudPrecio.TabIndex = 30;
             this.nudPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // btnCancela
+            // 
+            this.btnCancela.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnCancela.Location = new System.Drawing.Point(239, 277);
+            this.btnCancela.Name = "btnCancela";
+            this.btnCancela.Size = new System.Drawing.Size(101, 33);
+            this.btnCancela.TabIndex = 31;
+            this.btnCancela.Text = "Cancelar";
+            this.btnCancela.UseVisualStyleBackColor = false;
+            this.btnCancela.Click += new System.EventHandler(this.btnCancela_Click);
+            // 
             // ModificarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 350);
+            this.Controls.Add(this.btnCancela);
             this.Controls.Add(this.nudPrecio);
             this.Controls.Add(this.addArticle);
             this.Controls.Add(this.Precio);
@@ -248,5 +261,6 @@
         private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.Button addArticle;
         private System.Windows.Forms.NumericUpDown nudPrecio;
+        private System.Windows.Forms.Button btnCancela;
     }
 }

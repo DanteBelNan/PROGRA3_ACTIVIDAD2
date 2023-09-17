@@ -46,6 +46,7 @@
             this.txbUrlImagen = new System.Windows.Forms.TextBox();
             this.lvUrlImagen = new System.Windows.Forms.ListView();
             this.btnAgregarUrl = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             // addArticle
             // 
             this.addArticle.BackColor = System.Drawing.SystemColors.Control;
-            this.addArticle.Location = new System.Drawing.Point(224, 302);
+            this.addArticle.Location = new System.Drawing.Point(143, 302);
             this.addArticle.Name = "addArticle";
             this.addArticle.Size = new System.Drawing.Size(123, 36);
             this.addArticle.TabIndex = 2;
@@ -218,11 +219,23 @@
             this.btnAgregarUrl.UseVisualStyleBackColor = true;
             this.btnAgregarUrl.Click += new System.EventHandler(this.btnAgregarUrl_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancelar.Location = new System.Drawing.Point(272, 302);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(123, 36);
+            this.btnCancelar.TabIndex = 21;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 350);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregarUrl);
             this.Controls.Add(this.lvUrlImagen);
             this.Controls.Add(this.txbUrlImagen);
@@ -274,5 +287,6 @@
         private System.Windows.Forms.TextBox txbUrlImagen;
         private System.Windows.Forms.ListView lvUrlImagen;
         private System.Windows.Forms.Button btnAgregarUrl;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
