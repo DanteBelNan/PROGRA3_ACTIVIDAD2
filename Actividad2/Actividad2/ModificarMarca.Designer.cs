@@ -51,7 +51,7 @@
             this.txbNewMarca.Location = new System.Drawing.Point(147, 118);
             this.txbNewMarca.Name = "txbNewMarca";
             this.txbNewMarca.Size = new System.Drawing.Size(377, 20);
-            this.txbNewMarca.TabIndex = 32;
+            this.txbNewMarca.TabIndex = 1;
             this.txbNewMarca.TextChanged += new System.EventHandler(this.txbNewMarca_TextChanged);
             // 
             // label2
@@ -70,7 +70,7 @@
             this.cmbMarca.Location = new System.Drawing.Point(104, 68);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(438, 21);
-            this.cmbMarca.TabIndex = 30;
+            this.cmbMarca.TabIndex = 0;
             // 
             // lblMarca
             // 
@@ -87,7 +87,7 @@
             this.button1.Location = new System.Drawing.Point(123, 178);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(160, 46);
-            this.button1.TabIndex = 33;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Cambiar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -97,7 +97,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(289, 178);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(160, 46);
-            this.btnCancelar.TabIndex = 34;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);

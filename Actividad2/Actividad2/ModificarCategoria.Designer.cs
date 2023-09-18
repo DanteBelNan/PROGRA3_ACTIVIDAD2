@@ -41,7 +41,7 @@
             this.tbxNuevaDescripcion.Location = new System.Drawing.Point(44, 177);
             this.tbxNuevaDescripcion.Name = "tbxNuevaDescripcion";
             this.tbxNuevaDescripcion.Size = new System.Drawing.Size(412, 95);
-            this.tbxNuevaDescripcion.TabIndex = 2;
+            this.tbxNuevaDescripcion.TabIndex = 1;
             this.tbxNuevaDescripcion.Text = "";
             // 
             // lblIdCategoria
@@ -67,7 +67,7 @@
             this.btnConfirmarEdicion.Location = new System.Drawing.Point(481, 197);
             this.btnConfirmarEdicion.Name = "btnConfirmarEdicion";
             this.btnConfirmarEdicion.Size = new System.Drawing.Size(66, 35);
-            this.btnConfirmarEdicion.TabIndex = 6;
+            this.btnConfirmarEdicion.TabIndex = 2;
             this.btnConfirmarEdicion.Text = "Editar";
             this.btnConfirmarEdicion.UseVisualStyleBackColor = true;
             this.btnConfirmarEdicion.Click += new System.EventHandler(this.btnConfirmarEdicion_Click);
@@ -77,7 +77,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(481, 238);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(66, 35);
-            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -89,7 +89,7 @@
             this.cbxCategorias.Location = new System.Drawing.Point(175, 19);
             this.cbxCategorias.Name = "cbxCategorias";
             this.cbxCategorias.Size = new System.Drawing.Size(207, 21);
-            this.cbxCategorias.TabIndex = 10;
+            this.cbxCategorias.TabIndex = 0;
             // 
             // ModificarCategoria
             // 

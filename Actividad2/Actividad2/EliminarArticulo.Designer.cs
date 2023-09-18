@@ -51,7 +51,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(176, 10);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 7;
+            this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -61,7 +61,7 @@
             this.txbCodigo.Location = new System.Drawing.Point(61, 12);
             this.txbCodigo.Name = "txbCodigo";
             this.txbCodigo.Size = new System.Drawing.Size(100, 20);
-            this.txbCodigo.TabIndex = 6;
+            this.txbCodigo.TabIndex = 0;
             // 
             // label2
             // 
@@ -79,7 +79,7 @@
             this.nudPrecio.Location = new System.Drawing.Point(97, 237);
             this.nudPrecio.Name = "nudPrecio";
             this.nudPrecio.Size = new System.Drawing.Size(438, 20);
-            this.nudPrecio.TabIndex = 40;
+            this.nudPrecio.TabIndex = 6;
             this.nudPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Precio
@@ -109,7 +109,7 @@
             this.cmbCategoria.Location = new System.Drawing.Point(97, 208);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(438, 21);
-            this.cmbCategoria.TabIndex = 37;
+            this.cmbCategoria.TabIndex = 5;
             // 
             // cmbMarca
             // 
@@ -118,7 +118,8 @@
             this.cmbMarca.Location = new System.Drawing.Point(97, 176);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(438, 21);
-            this.cmbMarca.TabIndex = 36;
+            this.cmbMarca.TabIndex = 4;
+            this.cmbMarca.SelectedIndexChanged += new System.EventHandler(this.cmbMarca_SelectedIndexChanged);
             // 
             // lblMarca
             // 
@@ -147,7 +148,7 @@
             this.txbDescripcion.Location = new System.Drawing.Point(97, 100);
             this.txbDescripcion.Name = "txbDescripcion";
             this.txbDescripcion.Size = new System.Drawing.Size(438, 70);
-            this.txbDescripcion.TabIndex = 33;
+            this.txbDescripcion.TabIndex = 3;
             this.txbDescripcion.Text = "";
             // 
             // label3
@@ -166,7 +167,7 @@
             this.txbNombre.Location = new System.Drawing.Point(97, 63);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(438, 20);
-            this.txbNombre.TabIndex = 31;
+            this.txbNombre.TabIndex = 2;
             // 
             // deleteArticle
             // 
@@ -175,7 +176,7 @@
             this.deleteArticle.Location = new System.Drawing.Point(200, 284);
             this.deleteArticle.Name = "deleteArticle";
             this.deleteArticle.Size = new System.Drawing.Size(101, 33);
-            this.deleteArticle.TabIndex = 41;
+            this.deleteArticle.TabIndex = 7;
             this.deleteArticle.Text = "Eliminar";
             this.deleteArticle.UseVisualStyleBackColor = false;
             this.deleteArticle.Click += new System.EventHandler(this.deleteArticle_Click);
@@ -186,7 +187,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(322, 284);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(101, 33);
-            this.btnCancelar.TabIndex = 42;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);

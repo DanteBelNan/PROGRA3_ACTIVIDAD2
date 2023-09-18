@@ -49,7 +49,7 @@
             this.btnEliminarCategoria.Location = new System.Drawing.Point(162, 265);
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
             this.btnEliminarCategoria.Size = new System.Drawing.Size(100, 50);
-            this.btnEliminarCategoria.TabIndex = 5;
+            this.btnEliminarCategoria.TabIndex = 2;
             this.btnEliminarCategoria.Text = "Eliminar";
             this.btnEliminarCategoria.UseVisualStyleBackColor = true;
             this.btnEliminarCategoria.Click += new System.EventHandler(this.btnEliminarCategoria_Click);
@@ -60,7 +60,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(318, 265);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(101, 50);
-            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -71,7 +71,7 @@
             this.cbxCategorias.Location = new System.Drawing.Point(204, 61);
             this.cbxCategorias.Name = "cbxCategorias";
             this.cbxCategorias.Size = new System.Drawing.Size(235, 21);
-            this.cbxCategorias.TabIndex = 7;
+            this.cbxCategorias.TabIndex = 1;
             // 
             // EliminarCategoria
             // 

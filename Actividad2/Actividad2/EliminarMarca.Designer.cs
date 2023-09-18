@@ -39,7 +39,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(129, 132);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(110, 50);
-            this.btnEliminar.TabIndex = 0;
+            this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -49,7 +49,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(280, 132);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(110, 50);
-            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -70,7 +70,7 @@
             this.cboMarca.Location = new System.Drawing.Point(169, 73);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(221, 21);
-            this.cboMarca.TabIndex = 3;
+            this.cboMarca.TabIndex = 0;
             // 
             // EliminarMarca
             // 

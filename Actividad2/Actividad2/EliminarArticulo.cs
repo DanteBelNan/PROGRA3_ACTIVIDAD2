@@ -76,5 +76,10 @@ namespace Actividad2
         {
             Close();
         }
+
+        private void cmbMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
