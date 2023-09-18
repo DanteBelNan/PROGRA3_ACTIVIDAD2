@@ -88,7 +88,6 @@ namespace Actividad2
             int idCategoria = categoriaDB.obtener(categoria);
 
             articuloDB.modificar(id, codigo, nombre, desc, idMarca, idCategoria, precio);
-            MessageBox.Show("Articulo modificado");
             this.Close();
         }
 

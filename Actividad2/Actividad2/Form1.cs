@@ -61,18 +61,44 @@ namespace Actividad2
 
         }
 
+        private bool Existe(string username)
+        {
+            UsuarioDB usuarioDB = new UsuarioDB();
+            bool yaExiste = false;
+
+            List<Usuario> usuarios = new List<Usuario>();
+            usuarios = usuarioDB.listar();
+
+            foreach(Usuario usuario in usuarios)
+            {
+                if(usuario.username == username)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
             UsuarioDB usuarioDB = new UsuarioDB();
             string username = txbUser.Text;
             string password = txbPassword.Text;
-            try
+            if (Existe(username))
             {
-                usuarioDB.Agregar(username, password);
-                MessageBox.Show("Usuario agregado");
-            }catch (Exception ex)
+                MessageBox.Show("Ese usuario ya existe, ingrese otro");
+            }
+            else
             {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    usuarioDB.Agregar(username, password);
+                    MessageBox.Show("Usuario agregado");
+                }catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
             }
         }
 
