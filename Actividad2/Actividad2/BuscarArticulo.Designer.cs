@@ -87,7 +87,6 @@
             // cmbCategoria
             // 
             this.cmbCategoria.BackColor = System.Drawing.Color.White;
-            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.Enabled = false;
             this.cmbCategoria.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cmbCategoria.FormattingEnabled = true;
@@ -99,7 +98,6 @@
             // cmbMarca
             // 
             this.cmbMarca.BackColor = System.Drawing.Color.White;
-            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMarca.Enabled = false;
             this.cmbMarca.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cmbMarca.FormattingEnabled = true;
