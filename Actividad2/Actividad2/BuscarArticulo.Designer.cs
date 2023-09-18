@@ -71,7 +71,7 @@
             this.nudPrecio.Location = new System.Drawing.Point(74, 243);
             this.nudPrecio.Name = "nudPrecio";
             this.nudPrecio.Size = new System.Drawing.Size(275, 20);
-            this.nudPrecio.TabIndex = 29;
+            this.nudPrecio.TabIndex = 7;
             this.nudPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblCategoria
@@ -94,7 +94,7 @@
             this.cmbCategoria.Location = new System.Drawing.Point(74, 206);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(275, 21);
-            this.cmbCategoria.TabIndex = 27;
+            this.cmbCategoria.TabIndex = 6;
             // 
             // cmbMarca
             // 
@@ -106,7 +106,7 @@
             this.cmbMarca.Location = new System.Drawing.Point(74, 171);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(275, 21);
-            this.cmbMarca.TabIndex = 26;
+            this.cmbMarca.TabIndex = 5;
             // 
             // lblMarca
             // 
@@ -137,7 +137,7 @@
             this.txbDescripcion.Location = new System.Drawing.Point(74, 90);
             this.txbDescripcion.Name = "txbDescripcion";
             this.txbDescripcion.Size = new System.Drawing.Size(275, 70);
-            this.txbDescripcion.TabIndex = 23;
+            this.txbDescripcion.TabIndex = 4;
             this.txbDescripcion.Text = "";
             // 
             // lblNombre
@@ -158,7 +158,7 @@
             this.txbNombre.Location = new System.Drawing.Point(74, 63);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(275, 20);
-            this.txbNombre.TabIndex = 21;
+            this.txbNombre.TabIndex = 3;
             // 
             // btnAdelante
             // 
@@ -167,7 +167,7 @@
             this.btnAdelante.Location = new System.Drawing.Point(500, 253);
             this.btnAdelante.Name = "btnAdelante";
             this.btnAdelante.Size = new System.Drawing.Size(75, 23);
-            this.btnAdelante.TabIndex = 33;
+            this.btnAdelante.TabIndex = 9;
             this.btnAdelante.Text = "Adelante";
             this.btnAdelante.UseVisualStyleBackColor = false;
             this.btnAdelante.Click += new System.EventHandler(this.btnAdelante_Click);
@@ -179,7 +179,7 @@
             this.btnAtras.Location = new System.Drawing.Point(404, 253);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(75, 23);
-            this.btnAtras.TabIndex = 32;
+            this.btnAtras.TabIndex = 8;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
@@ -201,7 +201,7 @@
             this.cmbCodigos.Location = new System.Drawing.Point(142, 24);
             this.cmbCodigos.Name = "cmbCodigos";
             this.cmbCodigos.Size = new System.Drawing.Size(86, 21);
-            this.cmbCodigos.TabIndex = 34;
+            this.cmbCodigos.TabIndex = 0;
             this.cmbCodigos.SelectionChangeCommitted += new System.EventHandler(this.cmbCodigos_SelectionChangeCommitted);
             // 
             // label1
@@ -218,14 +218,14 @@
             this.txbCod.Location = new System.Drawing.Point(350, 24);
             this.txbCod.Name = "txbCod";
             this.txbCod.Size = new System.Drawing.Size(100, 20);
-            this.txbCod.TabIndex = 36;
+            this.txbCod.TabIndex = 1;
             // 
             // BuscarCodigo
             // 
             this.BuscarCodigo.Location = new System.Drawing.Point(456, 22);
             this.BuscarCodigo.Name = "BuscarCodigo";
             this.BuscarCodigo.Size = new System.Drawing.Size(75, 23);
-            this.BuscarCodigo.TabIndex = 37;
+            this.BuscarCodigo.TabIndex = 2;
             this.BuscarCodigo.Text = "Buscar";
             this.BuscarCodigo.UseVisualStyleBackColor = true;
             this.BuscarCodigo.Click += new System.EventHandler(this.BuscarCodigo_Click);

@@ -41,7 +41,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(147, 139);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(91, 36);
-            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -51,7 +51,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(36, 139);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(92, 38);
-            this.btnAgregar.TabIndex = 10;
+            this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -61,7 +61,7 @@
             this.txtDescMarca.Location = new System.Drawing.Point(115, 73);
             this.txtDescMarca.Name = "txtDescMarca";
             this.txtDescMarca.Size = new System.Drawing.Size(123, 20);
-            this.txtDescMarca.TabIndex = 9;
+            this.txtDescMarca.TabIndex = 0;
             // 
             // txtIdMarca
             // 

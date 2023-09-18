@@ -63,7 +63,7 @@
             this.txtIdCat.Name = "txtIdCat";
             this.txtIdCat.ReadOnly = true;
             this.txtIdCat.Size = new System.Drawing.Size(123, 20);
-            this.txtIdCat.TabIndex = 2;
+            this.txtIdCat.TabIndex = 0;
             this.txtIdCat.TextChanged += new System.EventHandler(this.txtIdCat_TextChanged);
             // 
             // txtDescCat
@@ -71,7 +71,7 @@
             this.txtDescCat.Location = new System.Drawing.Point(143, 79);
             this.txtDescCat.Name = "txtDescCat";
             this.txtDescCat.Size = new System.Drawing.Size(123, 20);
-            this.txtDescCat.TabIndex = 3;
+            this.txtDescCat.TabIndex = 1;
             this.txtDescCat.TextChanged += new System.EventHandler(this.txtDescCat_TextChanged);
             // 
             // btnAgregar
@@ -79,7 +79,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(64, 145);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(92, 38);
-            this.btnAgregar.TabIndex = 4;
+            this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgrega_Click);
@@ -89,7 +89,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(175, 145);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(91, 36);
-            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);

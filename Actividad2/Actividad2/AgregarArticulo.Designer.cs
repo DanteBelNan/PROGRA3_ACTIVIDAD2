@@ -67,7 +67,7 @@
             this.addArticle.Location = new System.Drawing.Point(143, 302);
             this.addArticle.Name = "addArticle";
             this.addArticle.Size = new System.Drawing.Size(123, 36);
-            this.addArticle.TabIndex = 2;
+            this.addArticle.TabIndex = 8;
             this.addArticle.Text = "Agregar";
             this.addArticle.UseVisualStyleBackColor = false;
             this.addArticle.Click += new System.EventHandler(this.addArticle_Click);
@@ -77,7 +77,7 @@
             this.txbCodigo.Location = new System.Drawing.Point(68, 35);
             this.txbCodigo.Name = "txbCodigo";
             this.txbCodigo.Size = new System.Drawing.Size(464, 20);
-            this.txbCodigo.TabIndex = 3;
+            this.txbCodigo.TabIndex = 0;
             this.txbCodigo.TextChanged += new System.EventHandler(this.txbCodigo_TextChanged);
             // 
             // lblCodigo
@@ -95,7 +95,7 @@
             this.txbNombre.Location = new System.Drawing.Point(68, 70);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(464, 20);
-            this.txbNombre.TabIndex = 5;
+            this.txbNombre.TabIndex = 1;
             this.txbNombre.TextChanged += new System.EventHandler(this.txbNombre_TextChanged);
             // 
             // lblNombre
@@ -114,7 +114,7 @@
             this.txbDescripcion.Location = new System.Drawing.Point(68, 97);
             this.txbDescripcion.Name = "txbDescripcion";
             this.txbDescripcion.Size = new System.Drawing.Size(464, 70);
-            this.txbDescripcion.TabIndex = 7;
+            this.txbDescripcion.TabIndex = 2;
             this.txbDescripcion.Text = "";
             this.txbDescripcion.TextChanged += new System.EventHandler(this.txbDescripcion_TextChanged);
             // 
@@ -145,7 +145,7 @@
             this.cmbMarca.Location = new System.Drawing.Point(68, 178);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(144, 21);
-            this.cmbMarca.TabIndex = 11;
+            this.cmbMarca.TabIndex = 3;
             // 
             // cmbCategoria
             // 
@@ -154,7 +154,7 @@
             this.cmbCategoria.Location = new System.Drawing.Point(68, 213);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(144, 21);
-            this.cmbCategoria.TabIndex = 12;
+            this.cmbCategoria.TabIndex = 4;
             // 
             // lblCategoria
             // 
@@ -176,7 +176,7 @@
             0});
             this.nudPrecio.Name = "nudPrecio";
             this.nudPrecio.Size = new System.Drawing.Size(144, 20);
-            this.nudPrecio.TabIndex = 15;
+            this.nudPrecio.TabIndex = 5;
             this.nudPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Precio
@@ -204,7 +204,8 @@
             this.txbUrlImagen.Location = new System.Drawing.Point(285, 176);
             this.txbUrlImagen.Name = "txbUrlImagen";
             this.txbUrlImagen.Size = new System.Drawing.Size(247, 20);
-            this.txbUrlImagen.TabIndex = 18;
+            this.txbUrlImagen.TabIndex = 6;
+            this.txbUrlImagen.TextChanged += new System.EventHandler(this.txbUrlImagen_TextChanged);
             // 
             // lvUrlImagen
             // 
@@ -221,7 +222,7 @@
             this.btnAgregarUrl.Location = new System.Drawing.Point(523, 174);
             this.btnAgregarUrl.Name = "btnAgregarUrl";
             this.btnAgregarUrl.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregarUrl.TabIndex = 20;
+            this.btnAgregarUrl.TabIndex = 7;
             this.btnAgregarUrl.Text = "Agregar";
             this.btnAgregarUrl.UseVisualStyleBackColor = true;
             this.btnAgregarUrl.Click += new System.EventHandler(this.btnAgregarUrl_Click);
@@ -232,7 +233,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(272, 302);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(123, 36);
-            this.btnCancelar.TabIndex = 21;
+            this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);

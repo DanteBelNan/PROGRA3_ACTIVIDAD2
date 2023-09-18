@@ -283,5 +283,10 @@ namespace Actividad2
         {
             Close();
         }
+
+        private void txbUrlImagen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
