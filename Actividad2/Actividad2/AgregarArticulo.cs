@@ -46,6 +46,7 @@ namespace Actividad2
 
             nudPrecio.DecimalPlaces = 2;
             nudPrecio.Minimum = 0;
+            nudPrecio.Maximum = 999999999;
             nudPrecio.Increment = 10;
 
         }
