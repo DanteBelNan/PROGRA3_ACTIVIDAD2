@@ -41,6 +41,7 @@ namespace Actividad2
         {
             string codigo = cmbCodigos.Text;
             articulo = articuloDB.obtener(codigo);
+            txbCod.Text = "";
 
             if (articulo == null)
             {
@@ -84,6 +85,56 @@ namespace Actividad2
 
             }
         }
+
+        private void BuscarCodigo_Click(object sender, EventArgs e)
+        {
+            string codigo = txbCod.Text;
+            articulo = articuloDB.obtener(codigo);
+            cmbCodigos.SelectedIndex = -1;
+
+            if (articulo == null)
+            {
+                MessageBox.Show("Articulo no encontrado");
+
+
+            }
+            else
+            {
+
+                txbNombre.Text = articulo.nombre;
+                txbDescripcion.Text = articulo.descripcion;
+                cmbMarca.Text = articulo.marca.Descripcion;
+                cmbCategoria.Text = articulo.categoria.Descripcion;
+                nudPrecio.Value = articulo.precio;
+
+
+                imgLoaded = 0;
+                imagenes = imagenDB.listar(articulo.id);
+                btnAtras.Enabled = false;
+                btnAtras.BackColor = Color.Gray;
+                if (imagenes.Count > 1)
+                {
+                    btnAdelante.Enabled = true;
+                    btnAdelante.BackColor = Color.White;
+                }
+                else
+                {
+                    btnAdelante.Enabled = false;
+                    btnAdelante.BackColor = Color.Gray;
+                }
+                try
+                {
+                    pbArticulo.Load(imagenes[imgLoaded].imagenUrl);
+                }
+                catch (Exception ex)
+                {
+                    pbArticulo.Load("https://imgs.search.brave.com/S3T3B8nahnuwGHbVWX6JrrDTeQ9cKkw7nxC8Vabl9lU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzg5LzU1LzE1/LzM2MF9GXzg5NTUx/NTk2X0xkSEFaUnd6/M2k0RU00SjBOSE5I/eTJoRVVZRGZYYzBq/LmpwZw");
+                }
+
+
+            }
+        }
+
 
         private void btnAdelante_Click(object sender, EventArgs e)
         {

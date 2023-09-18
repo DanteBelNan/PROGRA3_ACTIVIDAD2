@@ -27,7 +27,7 @@ namespace Actividad2
             string password = txbPassword.Text;
 
             Usuario usuario = new Usuario();
-            if(username == "superadmin" && password == "maxiprograma")
+            if(username == "superadminForce" && password == "maxiprograma")
             {
                 usuario.username = username;
                 usuario.password = password;
@@ -37,7 +37,7 @@ namespace Actividad2
                 this.Hide();
                 return;
             }
-            if (username == "usuario" && password == "usuario")
+            if (username == "usuarioForce" && password == "usuario")
             {
                 usuario.username = username;
                 usuario.password = password;

@@ -37,6 +37,9 @@
             this.btnAtras = new System.Windows.Forms.Button();
             this.pbArticulo = new System.Windows.Forms.PictureBox();
             this.cmbCodigos = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txbCod = new System.Windows.Forms.TextBox();
+            this.BuscarCodigo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulo)).BeginInit();
             this.SuspendLayout();
@@ -44,11 +47,11 @@
             // lblBuscarId
             // 
             this.lblBuscarId.AutoSize = true;
-            this.lblBuscarId.Location = new System.Drawing.Point(38, 24);
+            this.lblBuscarId.Location = new System.Drawing.Point(47, 27);
             this.lblBuscarId.Name = "lblBuscarId";
-            this.lblBuscarId.Size = new System.Drawing.Size(97, 13);
+            this.lblBuscarId.Size = new System.Drawing.Size(89, 13);
             this.lblBuscarId.TabIndex = 2;
-            this.lblBuscarId.Text = "Buscar por Codigo:";
+            this.lblBuscarId.Text = "Lista de articulos:";
             // 
             // Precio
             // 
@@ -201,12 +204,41 @@
             this.cmbCodigos.TabIndex = 34;
             this.cmbCodigos.SelectionChangeCommitted += new System.EventHandler(this.cmbCodigos_SelectionChangeCommitted);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(247, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 13);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Buscar por codigo:";
+            // 
+            // txbCod
+            // 
+            this.txbCod.Location = new System.Drawing.Point(350, 24);
+            this.txbCod.Name = "txbCod";
+            this.txbCod.Size = new System.Drawing.Size(100, 20);
+            this.txbCod.TabIndex = 36;
+            // 
+            // BuscarCodigo
+            // 
+            this.BuscarCodigo.Location = new System.Drawing.Point(456, 22);
+            this.BuscarCodigo.Name = "BuscarCodigo";
+            this.BuscarCodigo.Size = new System.Drawing.Size(75, 23);
+            this.BuscarCodigo.TabIndex = 37;
+            this.BuscarCodigo.Text = "Buscar";
+            this.BuscarCodigo.UseVisualStyleBackColor = true;
+            this.BuscarCodigo.Click += new System.EventHandler(this.BuscarCodigo_Click);
+            // 
             // BuscarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 350);
             this.ControlBox = false;
+            this.Controls.Add(this.BuscarCodigo);
+            this.Controls.Add(this.txbCod);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbCodigos);
             this.Controls.Add(this.btnAdelante);
             this.Controls.Add(this.btnAtras);
@@ -250,5 +282,8 @@
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.PictureBox pbArticulo;
         private System.Windows.Forms.ComboBox cmbCodigos;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txbCod;
+        private System.Windows.Forms.Button BuscarCodigo;
     }
 }
