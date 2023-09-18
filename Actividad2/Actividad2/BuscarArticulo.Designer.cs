@@ -22,9 +22,7 @@
 
         private void InitializeComponent()
         {
-            this.txbCodigo = new System.Windows.Forms.TextBox();
             this.lblBuscarId = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.Precio = new System.Windows.Forms.Label();
             this.nudPrecio = new System.Windows.Forms.NumericUpDown();
             this.lblCategoria = new System.Windows.Forms.Label();
@@ -38,16 +36,10 @@
             this.btnAdelante = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.pbArticulo = new System.Windows.Forms.PictureBox();
+            this.cmbCodigos = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txbCodigo
-            // 
-            this.txbCodigo.Location = new System.Drawing.Point(139, 21);
-            this.txbCodigo.Name = "txbCodigo";
-            this.txbCodigo.Size = new System.Drawing.Size(100, 20);
-            this.txbCodigo.TabIndex = 1;
             // 
             // lblBuscarId
             // 
@@ -57,16 +49,6 @@
             this.lblBuscarId.Size = new System.Drawing.Size(97, 13);
             this.lblBuscarId.TabIndex = 2;
             this.lblBuscarId.Text = "Buscar por Codigo:";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(245, 12);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(60, 37);
-            this.btnBuscar.TabIndex = 3;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // Precio
             // 
@@ -209,12 +191,23 @@
             this.pbArticulo.TabIndex = 31;
             this.pbArticulo.TabStop = false;
             // 
+            // cmbCodigos
+            // 
+            this.cmbCodigos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCodigos.FormattingEnabled = true;
+            this.cmbCodigos.Location = new System.Drawing.Point(142, 24);
+            this.cmbCodigos.Name = "cmbCodigos";
+            this.cmbCodigos.Size = new System.Drawing.Size(86, 21);
+            this.cmbCodigos.TabIndex = 34;
+            this.cmbCodigos.SelectionChangeCommitted += new System.EventHandler(this.cmbCodigos_SelectionChangeCommitted);
+            // 
             // BuscarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 350);
             this.ControlBox = false;
+            this.Controls.Add(this.cmbCodigos);
             this.Controls.Add(this.btnAdelante);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.pbArticulo);
@@ -228,9 +221,7 @@
             this.Controls.Add(this.txbDescripcion);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txbNombre);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblBuscarId);
-            this.Controls.Add(this.txbCodigo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(610, 350);
             this.MinimumSize = new System.Drawing.Size(610, 350);
@@ -244,9 +235,7 @@
             this.PerformLayout();
 
         }
-        private System.Windows.Forms.TextBox txbCodigo;
         private System.Windows.Forms.Label lblBuscarId;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label Precio;
         private System.Windows.Forms.NumericUpDown nudPrecio;
         private System.Windows.Forms.Label lblCategoria;
@@ -260,5 +249,6 @@
         private System.Windows.Forms.Button btnAdelante;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.PictureBox pbArticulo;
+        private System.Windows.Forms.ComboBox cmbCodigos;
     }
 }

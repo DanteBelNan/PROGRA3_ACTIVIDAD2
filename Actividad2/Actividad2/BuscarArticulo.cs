@@ -14,7 +14,7 @@ namespace Actividad2
 {
     public partial class BuscarArticulo : Form
     {
-        private List<Articulo> articulos;
+        private List<Articulo> articulos = new List<Articulo>();
         ArticuloDB articuloDB = new ArticuloDB();
         Articulo articulo = new Articulo();
         ImagenDB imagenDB = new ImagenDB();
@@ -25,18 +25,21 @@ namespace Actividad2
         }
         private void BuscarArticulo_Load(object sender, EventArgs e)
         {
+            articulos = articuloDB.listar();
+            foreach (Articulo articulo in articulos)
+            {
+                cmbCodigos.Items.Add(articulo.codigo);
+            }
 
-            txbCodigo.Text = string.Empty;
+            cmbCodigos.Text = string.Empty;
             nudPrecio.Minimum = 0;
             nudPrecio.Maximum = 99999999999;
         }
 
         int imgLoaded;
-
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void cmbCodigos_SelectionChangeCommitted(object sender, EventArgs e)
         {
-
-            string codigo = txbCodigo.Text;
+            string codigo = cmbCodigos.Text;
             articulo = articuloDB.obtener(codigo);
 
             if (articulo == null)
@@ -80,8 +83,6 @@ namespace Actividad2
 
 
             }
-
-
         }
 
         private void btnAdelante_Click(object sender, EventArgs e)
@@ -134,5 +135,6 @@ namespace Actividad2
                 pbArticulo.Load("https://imgs.search.brave.com/jhh6dmNp1Vbc8vMSSDCk_kkSV6frsAznqf3cmw9LNXI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93ZXN0/LWdhbWVzLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMS8w/Ny92dGZlZGl0LWVy/cm9yLWxvYWRpbmct/aW1hZ2UucG5n");
             }
         }
+
     }
 }
